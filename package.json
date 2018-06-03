@@ -1,12 +1,13 @@
 {
-    "name": "code",
-    "displayName": "code",
-    "description": "",
+    "name": "code-rhythm",
+    "displayName": "code-rhythm",
+    "description": "code global snippets",
     "version": "0.0.1",
-    "publisher": "code",
+    "publisher": "https://github.com/onvno",
     "engines": {
         "vscode": "^1.23.0"
     },
+    "repository": "https://github.com/onvno/code-rhythm",
     "categories": [
         "Other"
     ],
@@ -17,12 +18,6 @@
         "*"
     ],
     "main": "./extension",
-    "contributes": {
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }]
-    },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "node ./node_modules/vscode/bin/test"
