@@ -1,0 +1,134 @@
+{
+	"@inherit_base_create": {
+		"prefix": "@inherit_base_create",
+		"body": [
+			"// 无构造，无函数，直接对象继承",
+			"// 可用于创建新对象",
+			"var Base = { a : 2};",
+			"var obj = Object.create(Base);",
+			"console.log(obj.a);",
+			"console.log(obj.__proto__ == Base);",
+			""
+		],
+		"description": "继承Object，无需new"
+	},
+	"@inherit_base_proto": {
+		"prefix": "@inherit_base_proto",
+		"body": [
+			"function ${1:Graph}() {",
+			"    this.vertices = [];",
+			"    this.edges = [];",
+			"}",
+			"  ",
+			"$1.prototype = {",
+			"    addVertex: function(v){",
+			"        this.vertices.push(v);",
+			"    }",
+			"};",
+			"  ",
+			"var ${2:demo} = new $1();"
+		],
+		"description": "proto基本继承"
+	},
+	"@inherit_proto_call": {
+		"prefix": "@inherit_proto_call",
+		"body": [
+			"function ${1:Shape}() {",
+			"    this.x = 0;",
+			"    this.y = 0;",
+			"}",
+			"",
+			"// 父类的方法",
+			"$1.prototype.move = function(x, y) {",
+			"    this.x += x;",
+			"    this.y += y;",
+			"    console.info('Shape moved.');",
+			"};",
+			"",
+			"// Rectangle - 子类(subclass)",
+			"function ${2:Rectangle}() {",
+			"    // call实现了es6 class构造方法constructor中",
+			"    Shape.call(this); // call super constructor.",
+			"}",
+			"",
+			"// 子类续承父类",
+			"$2.prototype = Object.create($1.prototype);",
+			"// 如不执行下一句，则Rectangle.prototype.constructor == Shape,即为Shape.prototype.constructor",
+			"$2.prototype.constructor = $2;",
+			"",
+			"var rect = new $2();"
+		],
+		"description": "call绑定构造函数式继承"
+	},
+	"_build_Object.create": {
+		"prefix": "_build_Object.create",
+		"body": [
+			"// Crockford JS精粹部分的Object.Create的实现",
+			"",
+			"Object.beget = function(o){",
+			"    var F= function(){};",
+			"    F.prototype=o;",
+			"    return new F()",
+			"}",
+			"",
+			"var base = {",
+			"    \"first\":\"lee\",",
+			"    \"last\":\" wei\",",
+			"    \"full\": function(){",
+			"        console.log(this.first + this.last)",
+			"    }",
+			"};",
+			"var sub = Object.beget(base);",
+			"// sub.__proto__ == F.prototype == base"
+		],
+		"description": "实现方式"
+	},
+	"@inherit_proto_new": {
+		"prefix": "@inherit_proto_new",
+		"body": [
+			"function ${1:Shape}(x, y) {",
+			"    this.base = '$1';",
+			"}",
+			"",
+			"// 父类的方法",
+			"$1.prototype.move = function(x, y) {",
+			"    this.x += x;",
+			"    this.y += y;",
+			"    console.info('$1 moved.');",
+			"};",
+			"",
+			"// Rectangle - 子类(subclass)",
+			"function ${2:Rectangle}(x, y) {",
+			"    this.x = x;",
+			"    this.y = y;",
+			"}",
+			"",
+			"// 子类续承父类",
+			"$2.prototype = new $1();",
+			"$2.prototype.constructor = $2;",
+			"",
+			"var rect = new $2(2,3);"
+		],
+		"description": "new式继承"
+	},
+	"_babel": {
+		"prefix": "_babel",
+		"body": [
+			"var baberlc = {",
+			"    \"presets\": [\"env\", \"react\", \"stage-2\"],",
+			"    \"plugins\": [\"transform-decorators-legacy\"]",
+			"}",
+			"",
+			"var package = {",
+			"    \"babel-core\": \"^6.26.0\",",
+			"    \"babel-loader\": \"^7.1.2\",",
+			"    \"babel-plugin-transform-decorators-legacy\": \"^1.3.4\",",
+			"    \"babel-polyfill\": \"^6.26.0\",",
+			"    \"babel-preset-env\": \"^1.6.1\",",
+			"    \"babel-preset-react\": \"^6.24.1\",",
+			"    \"babel-preset-stage-2\": \"^6.24.1\",",
+			"}"
+		],
+		"description": "配置"
+	},
+}
