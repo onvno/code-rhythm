@@ -3,7 +3,7 @@
     "displayName": "code-rhythm",
     "description": "code global snippets",
     "version": "0.0.1",
-    "publisher": "https://github.com/onvno",
+    "publisher": "onvno",
     "engines": {
         "vscode": "^1.23.0"
     },
