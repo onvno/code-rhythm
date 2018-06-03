@@ -5,9 +5,8 @@ const process = require('process');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-let version = require('./package.json').version;
+let version = require('./version.js').version;
 version = version.split('.').join('-');
-console.log("version:", version);
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -72,12 +71,6 @@ function copyDir(src, dist, callback) {
 
 
 function activate(context) {
-    console.log('working!');
-
-    // console.log(vscode.extensions.getExtension('publisher').packageJSON.version)
-
-
-    // fs.writeFileSync('/Users/AYA/Library/Application\ Support/Code/User/snippets/test', '123', 'utf-8')
     // console.log("vscode:", vscode.env.appRoot);
 
     // 读写snippet
@@ -104,9 +97,9 @@ function activate(context) {
             break;
         }
     }
-    console.log("vsCodeUserSettingsPath:", vsCodeUserSettingsPath);
+    // console.log("vsCodeUserSettingsPath:", vsCodeUserSettingsPath);
     let srcDir = path.resolve(__dirname, './snippets')
-    console.log("srcDir:", srcDir);
+    // console.log("srcDir:", srcDir);
     copyDir(srcDir, vsCodeUserSettingsPath, (err)=> {
         if(err){
             console.log(err);
