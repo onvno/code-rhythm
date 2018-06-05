@@ -5,7 +5,7 @@ const path = require('path');
 let version = require('../version.js').version;
 version = version.split('.').join('-');
 
-let vsCodeUserSnippetPath = require('../utils/snippetPath');
+let vsCodeUserSnippetPath = require('./snippetPath');
 
 const snippetFiles = fs.readdirSync(vsCodeUserSnippetPath);
 
