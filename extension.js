@@ -5,6 +5,9 @@ const process = require('process');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+
+let deleteSnippets = require('./utils/deleteSnippets');
+let vsCodeUserSnippetPath = require('./utils/snippetPath');
 let version = require('./version.js').version;
 version = version.split('.').join('-');
 
@@ -74,52 +77,17 @@ function activate(context) {
     // console.log("vscode:", vscode.env.appRoot);
 
     // 读写snippet
-    const osName = os.type();
-    let vsCodeUserSettingsPath;
-    let delimiter = "/";
-    switch (osName) {
-        case ("Darwin"): {
-            vsCodeUserSettingsPath = process.env.HOME + "/Library/Application Support/Code/User/snippets/";
-            break;
-        }
-        case ("Linux"): {
-            vsCodeUserSettingsPath = process.env.HOME + "/.config/Code/User/snippets/";
-            break;
-        }
-        case ("Windows_NT"): {
-            vsCodeUserSettingsPath = process.env.APPDATA + "\\Code\\User\\snippets\\";
-            delimiter = "\\";
-            break;
-        }
-        default: {
-            //BSD?
-            vsCodeUserSettingsPath = process.env.HOME + "/.config/Code/User/snippets/";
-            break;
-        }
-    }
-    // console.log("vsCodeUserSettingsPath:", vsCodeUserSettingsPath);
     let srcDir = path.resolve(__dirname, './snippets')
-    // console.log("srcDir:", srcDir);
-    copyDir(srcDir, vsCodeUserSettingsPath, (err)=> {
+    copyDir(srcDir, vsCodeUserSnippetPath, (err)=> {
         if(err){
             console.log(err);
         }
         console.log('coping!');
     })
 
+    console.log('Congratulations, your extension "code-rhythm" is now active!');
 
-    // Use the console to output diagnostic information (console.log) and errors (console.error)
-    // This line of code will only be executed once when your extension is activated
-    // ExtensionContext
-    console.log('Congratulations, your extension "@code" is now active!');
-
-    // The command has been defined in the package.json file
-    // Now provide the implementation of the command with  registerCommand
-    // The commandId parameter must match the command field in package.json
     let disposable = vscode.commands.registerCommand('extension.sayHello', function () {
-        // The code you place here will be executed every time your command is executed
-
-        // Display a message box to the user
         vscode.window.showInformationMessage('Hello World!');
     });
 
@@ -129,5 +97,6 @@ exports.activate = activate;
 
 // this method is called when your extension is deactivated
 function deactivate() {
+    deleteSnippets();
 }
 exports.deactivate = deactivate;

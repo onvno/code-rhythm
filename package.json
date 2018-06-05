@@ -2,7 +2,7 @@
     "name": "code-rhythm",
     "displayName": "code-rhythm",
     "description": "code global snippets",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "onvno",
     "engines": {
         "vscode": "^1.23.0"
@@ -20,6 +20,7 @@
     "main": "./extension",
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
+        "vscode:uninstall": "node ./uninstall/index",
         "test": "node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
