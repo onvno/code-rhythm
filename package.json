@@ -3,7 +3,7 @@
     "displayName": "code-rhythm",
     "description": "code global snippets",
     "version": "1.0.2",
-    "icon": "https://ww1.sinaimg.cn/large/63885f75ly1fs1yun5oemj203k03kdfn.jpg",
+    "icon": "assets/code.png",
     "publisher": "onvno",
     "engines": {
         "vscode": "^1.23.0"
