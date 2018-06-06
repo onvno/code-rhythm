@@ -30,7 +30,7 @@ ext install code-rhythm
 
 *注：目前仅对mac做了测试，window下是否有兼容问题暂未知晓*
 
-![](http://ww1.sinaimg.cn/large/63885f75ly1fs1x6tvpc6g20g80in7wh.gif)
+![](https://ww1.sinaimg.cn/large/63885f75ly1fs1x6tvpc6g20g80in7wh.gif)
 
 
 
