@@ -111,6 +111,37 @@
 		],
 		"description": "new式继承"
 	},
+	"@inherit_proto_apply": {
+		"prefix": "@inherit_proto_apply",
+		"body": [
+			"function Shape(x,y) {",
+			"    this.x = x;",
+			"    this.y = y;",
+			"}",
+			"",
+			"// 父类的方法",
+			"Shape.prototype.move = function(x, y) {",
+			"    this.x += x;",
+			"    this.y += y;",
+			"    console.info('Shape moved.');",
+			"};",
+			"",
+			"// Rectangle - 子类(subclass)",
+			"function Rectangle() {",
+			"    // call实现了es6 class构造方法constructor中",
+			"    Shape.apply(this,arguments); // call super constructor.",
+			"}",
+			"",
+			"// 子类续承父类",
+			"Rectangle.prototype = Object.create(Shape.prototype);",
+			"// 如不执行下一句，则Rectangle.prototype.constructor == Shape,即为Shape.prototype.constructor",
+			"Rectangle.prototype.constructor = Rectangle;",
+			"",
+			"var rect = new Rectangle(2,3);",
+			"console.log(rect.x);"
+		],
+		"description": "apply继承(带argments)"
+	},
 	"_babel": {
 		"prefix": "_babel",
 		"body": [
