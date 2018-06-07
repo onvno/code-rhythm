@@ -2,7 +2,7 @@
     "name": "code-rhythm",
     "displayName": "code-rhythm",
     "description": "code global snippets",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "icon": "assets/code.png",
     "publisher": "onvno",
     "engines": {
