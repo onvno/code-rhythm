@@ -1,5 +1,3 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
 const process = require('process');
 const fs = require('fs');
@@ -11,8 +9,6 @@ let vsCodeUserSnippetPath = require('./utils/snippetPath');
 let version = require('./version.js').version;
 version = version.split('.').join('-');
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
 
 /*
  * 复制目录、子目录，及其中的文件
@@ -38,14 +34,10 @@ function copyDir(src, dist, callback) {
             } else {
                 paths.forEach(function(path) {
                     if(path.indexOf('code-snippets') > 0){
-                        // const version = '0-0-1';
                         let pathJoin = path.replace('.', `-${version}.`);
-                        
-                        // console.log("path:::", path);
-                        // console.log("pathJoin:", pathJoin);
 
-                        var _src = src + '/' +path;
-                        var _dist = dist + '/' +pathJoin;
+                        var _src = src + '/' + path;
+                        var _dist = dist + '/' + pathJoin;
                         fs.stat(_src, function(err, stat) {
                             if(err){
                                 callback(err);
@@ -58,8 +50,8 @@ function copyDir(src, dist, callback) {
                                         console.log('已经存在');
                                     }
                                 } else if(stat.isDirectory()) {
-                                // 当是目录是，递归复制
-                                copyDir(_src, _dist, callback)
+                                    // 目录递归复制
+                                    copyDir(_src, _dist, callback)
                                 }
                             }
                         })
@@ -74,7 +66,8 @@ function copyDir(src, dist, callback) {
 
 
 function activate(context) {
-    // console.log("vscode:", vscode.env.appRoot);
+    // 获取插件目录 - 以备后续可能用到
+    // console.log(vscode.extensions.getExtension ("HookyQR.beautify").extensionPath);
 
     // 读写snippet
     let srcDir = path.resolve(__dirname, './snippets')

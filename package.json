@@ -2,7 +2,7 @@
     "name": "code-rhythm",
     "displayName": "code-rhythm",
     "description": "code global snippets",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "icon": "assets/code.png",
     "publisher": "onvno",
     "engines": {
@@ -10,7 +10,8 @@
     },
     "repository": "https://github.com/onvno/code-rhythm",
     "categories": [
-        "Other"
+        "Other",
+        "Snippets"
     ],
     "test": [
       "onCommand:extension.sayHello"
