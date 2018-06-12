@@ -30,7 +30,6 @@
 		],
 		"description": "按钮单选框组"
   },
-
   "@element_radio_border": {
 		"prefix": "@element_radio_border",
 		"body": [
@@ -38,7 +37,6 @@
 		],
 		"description": "带边框单选框"
   },
-  
   "@element_checkbox": {
 		"prefix": "@element_checkbox",
 		"body": [
@@ -46,5 +44,90 @@
       "<el-checkbox v-model=\"checked2\" disabled>禁用多选框</el-checkbox>"
 		],
 		"description": "多选框"
+  },
+  "@element_input": {
+		"prefix": "@element_input",
+		"body": [
+      "<el-input v-model=\"input\" placeholder=\"普通输入框\"></el-input>",
+      "<el-input v-model=\"input\" placeholder=\"禁用输入框\":disabled=\"true\"></el-input>",
+      "<el-input v-model=\"input\" placeholder=\"可清除输入框\":disabled=\"true\" clearable></el-input>",
+		],
+		"description": "输入框"
+  },
+  "@element_input_icon": {
+		"prefix": "@element_input_icon",
+		"body": [
+      "<div class=\"demo-input-suffix\">",
+      "  属性方式:",
+      "  <el-input",
+      "    placeholder=\"请选择日期\"",
+      "    suffix-icon=\"el-icon-date\"",
+      "    v-model=\"input2\">",
+      "  </el-input>",
+      "  <el-input",
+      "    placeholder=\"请输入内容\"",
+      "    prefix-icon=\"el-icon-search",
+      "    v-model=\"input21\">",
+      "  </el-input>",
+      "</div>",
+      "<div class=\"demo-input-suffix\">",
+      "  slot 方式：",
+      "  <el-input",
+      "    placeholder=\"请选择日期\"",
+      "    v-model=\"input22\">",
+      "   <i slot=\"suffix\" class=\"el-input__icon el-icon-date\"></i>",
+      "  </el-input>",
+      "  <el-input",
+      "    placeholder=\"请输入内容\"",
+      "    v-model=\"input23\">",
+      "    <i slot=\"prefix\" class=\"el-input__icon el-icon-search\"></i>",
+      "  </el-input>",
+      "</div>"
+		],
+		"description": "带图标输入框"
+  },
+  "@element_input_area": {
+		"prefix": "@element_input_area",
+		"body": [
+      "<el-input",
+      "  type=\"textarea\"",
+      "  :rows=\"2\"",
+      "  placeholder=\"配置型文本域\"",
+      "  v-model=\"textarea\">",
+      "</el-input>",
+      "<el-input",
+      "  type=\"textarea\"",
+      "  autosize",
+      "  placeholder=\"自适应文本域\"",
+      "  v-model=\"textarea2\">",
+      "</el-input>"
+		],
+		"description": "文本输入框"
+  },
+  "@element_input_complex": {
+		"prefix": "@element_input_complex",
+		"body": [
+      "<div>",
+      "  <el-input placeholder=\"请输入内容\" v-model=\"input3\">",
+      "    <template slot=\"prepend\">Http://</template>",
+      "  </el-input>",
+      "</div>",
+      "<div style=\"margin-top: 15px;\">",
+      "  <el-input placeholder=\"请输入内容\" v-model=\"input4\">",
+      "    <template slot=\"append\">.com</template>",
+      "  </el-input>",
+      "</div>",
+      "<div style=\"margin-top: 15px;\">",
+      " <el-input placeholder=\"请输入内容\" v-model=\"input5\" class=\"input-with-select\">",
+      "    <el-select v-model=\"select\" slot=\"prepend\" placeholder=\"请选择\">",
+      "      <el-option label=\"餐厅名\" value=\"1\"></el-option>",
+      "      <el-option label=\"订单号\" value=\"2\"></el-option>",
+      "      <el-option label=\"用户电话\" value=\"3\"></el-option>",
+      "    </el-select>",
+      "    <el-button slot=\"append\" icon=\"el-icon-search\"></el-button>",
+      "  </el-input>",
+      "</div>",
+		],
+		"description": "复合型输入框"
   },
 }
