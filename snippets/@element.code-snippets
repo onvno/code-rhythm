@@ -864,4 +864,16 @@
     ],
 		"description": "可删除标签"
   },
+  "@element_progress": {
+		"prefix": "@element_progress",
+		"body": [
+      "<!--  :text-inside=\"true\" 进度内显 -->",
+      "<el-progress :percentage=\"0\" type=\"circle\"></el-progress>",
+      "<el-progress :percentage=\"70\"></el-progress>",
+      "<el-progress :percentage=\"80\" color=\"#8e71c7\"></el-progress>",
+      "<el-progress :percentage=\"100\" status=\"success\"></el-progress>",
+      "<el-progress :percentage=\"50\" status=\"exception\"></el-progress>"
+    ],
+		"description": "标准进度条"
+  }
 }
