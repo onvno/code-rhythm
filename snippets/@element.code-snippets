@@ -2,6 +2,7 @@
 	"@element_radio": {
 		"prefix": "@element_radio",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/radio -->",
       "<el-radio v-model=\"radio\" label=\"1\">单选框</el-radio>",
       "<el-radio disabled v-model=\"radio\" label=\"2\">禁用单选框</el-radio>"
 		],
@@ -10,6 +11,7 @@
   "@element_radio_group": {
 		"prefix": "@element_radio_group",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/radio -->",
       "<el-radio-group v-model=\"radio2\">",
       "  <el-radio :label=\"3\">备选项</el-radio>",
       "  <el-radio :label=\"6\">备选项</el-radio>",
@@ -21,6 +23,7 @@
   "@element_radio_group_button": {
 		"prefix": "@element_radio_group_botton",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/radio -->",
       "<el-radio-group v-model=\"radio3\">",
       "  <el-radio-button label=\"上海\"></el-radio-button>",
       "  <el-radio-button label=\"北京\"></el-radio-button>",
@@ -33,6 +36,7 @@
   "@element_radio_border": {
 		"prefix": "@element_radio_border",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/radio -->",
       "<el-radio v-model=\"radio7\" label=\"1\" border>备选项1</el-radio>"
 		],
 		"description": "带边框单选框"
@@ -40,6 +44,7 @@
   "@element_checkbox": {
 		"prefix": "@element_checkbox",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/checkbox -->",
       "<el-checkbox v-model=\"checked\">多选框</el-checkbox>",
       "<el-checkbox v-model=\"checked2\" disabled>禁用多选框</el-checkbox>"
 		],
@@ -48,6 +53,7 @@
   "@element_input": {
 		"prefix": "@element_input",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/input -->",
       "<el-input v-model=\"input\" placeholder=\"普通输入框\"></el-input>",
       "<el-input v-model=\"input\" placeholder=\"禁用输入框\":disabled=\"true\"></el-input>",
       "<el-input v-model=\"input\" placeholder=\"可清除输入框\":disabled=\"true\" clearable></el-input>",
@@ -57,6 +63,7 @@
   "@element_input_icon": {
 		"prefix": "@element_input_icon",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/input -->",
       "<div class=\"demo-input-suffix\">",
       "  属性方式:",
       "  <el-input",
@@ -89,6 +96,7 @@
   "@element_input_area": {
 		"prefix": "@element_input_area",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/input -->",
       "<el-input",
       "  type=\"textarea\"",
       "  :rows=\"2\"",
@@ -107,6 +115,7 @@
   "@element_input_complex": {
 		"prefix": "@element_input_complex",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/input -->",
       "<div>",
       "  <el-input placeholder=\"请输入内容\" v-model=\"input3\">",
       "    <template slot=\"prepend\">Http://</template>",
@@ -133,6 +142,7 @@
   "@element_select": {
 		"prefix": "@element_select",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/select -->",
       "<!-- 已添加clearable(可清除) filterable(可输入) -->",
       "<el-select v-model=\"value\" placeholder=\"请选择\" clearable filterable>",
       "  <el-option",
@@ -153,6 +163,7 @@
   "@element_select_group": {
 		"prefix": "@element_select_group",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/select -->",
       "<el-select v-model=\"value7\" placeholder=\"请选择\">",
       "  <el-option-group",
       "    v-for=\"group in options3\"",
@@ -198,6 +209,7 @@
   "@element_select_create_item": {
 		"prefix": "@element_select_create_item",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/select -->",
       "<el-select",
       "  v-model=\"value10\"",
       "  multiple",
@@ -229,6 +241,7 @@
   "@element_switch": {
 		"prefix": "@element_switch",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/switch -->",
       "<!-- 普通开关 -->",
       "<el-switch",
       "  v-model=\"value2\"",
@@ -247,6 +260,7 @@
   "@element_slider": {
 		"prefix": "@element_slider",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/slider -->",
       "<div class=\"block\">",
       "  <span class=\"demonstration\">默认</span>",
       "  <el-slider v-model=\"value1\"></el-slider>",
@@ -269,6 +283,7 @@
   "@element_time_picker": {
 		"prefix": "@element_time_picker",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/time-picker -->",
       "<el-time-picker",
       "  v-model=\"value2\"",
       "  :picker-options=\"{",
@@ -290,6 +305,7 @@
   "@element_date_picker": {
 		"prefix": "@element_date_picker",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/date-picker -->",
       "<div class=\"block\">",
       "  <span class=\"demonstration\">默认</span>",
       "  <el-date-picker",
@@ -315,6 +331,7 @@
   "@element_rate": {
 		"prefix": "@element_rate",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/rate -->",
       "<div class=\"block\">",
       "  <span class=\"demonstration\">默认不区分颜色</span>",
       " <el-rate v-model=\"value1\"></el-rate>",
@@ -340,6 +357,7 @@
   "@element_color_picker": {
 		"prefix": "@element_color_picker",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/color-picker -->",
       "<!-- 带透明度 -->",
       "<el-color-picker v-model=\"color3\" show-alpha></el-color-picker>",
       "<!-- 不带透明度 -->",
@@ -350,6 +368,7 @@
   "@element_form_validate": {
 		"prefix": "@element_form_validate",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/form -->",
       "<el-form :model=\"ruleForm\" :rules=\"rules\" ref=\"ruleForm\" label-width=\"100px\" class=\"demo-ruleForm\">",
       "  <el-form-item label=\"活动名称\" prop=\"name\">",
       "    <el-input v-model=\"ruleForm.name\"></el-input>",
@@ -460,6 +479,7 @@
   "@element_table": {
 		"prefix": "@element_table",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/table -->",
       "<el-table",
       "  :data=\"tableData\"",
       "  <!-- stripe 斑马纹-->",
@@ -505,6 +525,7 @@
   "@element_table_multiple": {
 		"prefix": "@element_table_multiple",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/table -->",
       "<el-table",
       "  :data=\"tableData3\"",
       "  style=\"width: 100%\">",
@@ -600,6 +621,7 @@
   "@element_table_filter": {
 		"prefix": "@element_table_filter",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/table -->",
       "<el-table",
       "  :data=\"tableData\"",
       "  style=\"width: 100%\">",
@@ -682,6 +704,7 @@
   "@element_table_customer": {
 		"prefix": "@element_table_customer",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/table -->",
       "<el-table",
       "  :data=\"tableData\"",
       "  style=\"width: 100%\">",
@@ -756,6 +779,7 @@
   "@element_table_toggle": {
 		"prefix": "@element_table_toggle",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/table -->",
       "<el-table",
       "  :data=\"tableData5\"",
       "  style=\"width: 100%\">",
@@ -845,6 +869,7 @@
   "@element_tag": {
 		"prefix": "@element_tag",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/tag -->",
       "<el-tag>标签一</el-tag>",
       "<el-tag type=\"success\">success</el-tag>",
       "<el-tag type=\"info\">info</el-tag>",
@@ -856,6 +881,7 @@
   "@element_tag_deleteable": {
 		"prefix": "@element_tag_deleteable",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/tag -->",
       "<el-tag>标签一</el-tag>",
       "<el-tag type=\"success\" closable>success</el-tag>",
       "<el-tag type=\"info\" closable>info</el-tag>",
@@ -867,6 +893,7 @@
   "@element_progress": {
 		"prefix": "@element_progress",
 		"body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/progress -->",
       "<!--  :text-inside=\"true\" 进度内显 -->",
       "<el-progress :percentage=\"0\" type=\"circle\"></el-progress>",
       "<el-progress :percentage=\"70\"></el-progress>",
@@ -879,58 +906,59 @@
   "@element_tree": {
 		"prefix": "@element_tree",
 		"body": [
-    "<el-tree :data=\"data\" :props=\"defaultProps\" @node-click=\"handleNodeClick\"></el-tree>",
-    "<!-- js -->",
-    "export default {",
-    "  data() {",
-    "    return {",
-    "      data: [{",
-    "        label: '一级 1',",
-    "        children: [{",
-    "          label: '二级 1-1',",
-    "          children: [{",
-    "            label: '三级 1-1-1'",
-    "          }]",
-    "        }]",
-    "      }, {",
-    "        label: '一级 2',",
-    "        children: [{",
-    "          label: '二级 2-1',",
-    "          children: [{",
-    "            label: '三级 2-1-1'",
-    "          }]",
-    "        }, {",
-    "          label: '二级 2-2',",
-    "          children: [{",
-    "            label: '三级 2-2-1'",
-    "          }]",
-    "        }]",
-    "      }, {",
-    "        label: '一级 3',",
-    "        children: [{",
-    "          label: '二级 3-1',",
-    "          children: [{",
-    "            label: '三级 3-1-1'",
-    "          }]",
-    "        }, {",
-    "          label: '二级 3-2',",
-    "          children: [{",
-    "            label: '三级 3-2-1'",
-    "          }]",
-    "        }]",
-    "      }],",
-    "      defaultProps: {",
-    "        children: 'children',",
-    "        label: 'label'",
-    "      }",
-    "    };",
-    "  },",
-    "  methods: {",
-    "    handleNodeClick(data) {",
-    "      console.log(data);",
-    "    }",
-    "  }",
-    "};"
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/tree -->",
+      "<el-tree :data=\"data\" :props=\"defaultProps\" @node-click=\"handleNodeClick\"></el-tree>",
+      "<!-- js -->",
+      "export default {",
+      "  data() {",
+      "    return {",
+      "      data: [{",
+      "        label: '一级 1',",
+      "        children: [{",
+      "          label: '二级 1-1',",
+      "          children: [{",
+      "            label: '三级 1-1-1'",
+      "          }]",
+      "        }]",
+      "      }, {",
+      "        label: '一级 2',",
+      "        children: [{",
+      "          label: '二级 2-1',",
+      "          children: [{",
+      "            label: '三级 2-1-1'",
+      "          }]",
+      "        }, {",
+      "          label: '二级 2-2',",
+      "          children: [{",
+      "            label: '三级 2-2-1'",
+      "          }]",
+      "        }]",
+      "      }, {",
+      "        label: '一级 3',",
+      "        children: [{",
+      "          label: '二级 3-1',",
+      "          children: [{",
+      "            label: '三级 3-1-1'",
+      "          }]",
+      "        }, {",
+      "          label: '二级 3-2',",
+      "          children: [{",
+      "            label: '三级 3-2-1'",
+      "          }]",
+      "        }]",
+      "      }],",
+      "      defaultProps: {",
+      "        children: 'children',",
+      "        label: 'label'",
+      "      }",
+      "    };",
+      "  },",
+      "  methods: {",
+      "    handleNodeClick(data) {",
+      "      console.log(data);",
+      "    }",
+      "  }",
+      "};"
     ],
 		"description": "树形表"
   },
