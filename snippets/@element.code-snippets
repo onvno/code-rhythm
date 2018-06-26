@@ -1317,10 +1317,11 @@
   "@element_dialog": {
     "prefix": "@element_dialog",
     "body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/dialog -->",
       "<!-- Form -->",
       "<el-button type=\"text\" @click=\"dialogFormVisible = true\">打开嵌套表单的 Dialog</el-button>",
       "",
-      "<el-dialog title=\"收货地址\" :visible.sync=\"dialogFormVisible\">",
+      "<el-dialog title=\"收货地址\" :visible.sync=\"dialogFormVisible\" center>",
       "  <el-form :model=\"form\">",
       "    <el-form-item label=\"活动名称\" :label-width=\"formLabelWidth\">",
       "      <el-input v-model=\"form.name\" auto-complete=\"off\"></el-input>",
@@ -1359,6 +1360,42 @@
       "</script>"
     ],
     "description": "对话框"
+  },
+  "@element_popover": {
+    "prefix": "@element_popover",
+    "body": [
+      "<!-- 文档链接: http://element.eleme.io/#/zh-CN/component/popover -->",
+      "<el-popover",
+      "  placement=\"top-start\"",
+      "  title=\"标题\"",
+      "  width=\"200\"",
+      "  trigger=\"hover\"",
+      "  content=\"这是一段内容,这是一段内容,这是一段内容,这是一段内容。\">",
+      "  <el-button slot=\"reference\">hover 激活</el-button>",
+      "</el-popover>",
+      "<el-popover",
+      "  placement=\"top\"",
+      "  width=\"160\"",
+      "  v-model=\"visible2\">",
+      "  <p>这是一段内容这是一段内容确定删除吗？</p>",
+      "  <div style=\"text-align: right; margin: 0\">",
+      "    <el-button size=\"mini\" type=\"text\" @click=\"visible2 = false\">取消</el-button>",
+      "    <el-button type=\"primary\" size=\"mini\" @click=\"visible2 = false\">确定</el-button>",
+      "  </div>",
+      "  <el-button slot=\"reference\">内嵌</el-button>",
+      "</el-popover>",
+      "",
+      "<script>",
+      "  export default {",
+      "    data() {",
+      "      return {",
+      "        visible2: false,",
+      "      };",
+      "    }",
+      "  }",
+      "</script>"
+    ],
+    "description": "弹出框"
   },
  
 }
