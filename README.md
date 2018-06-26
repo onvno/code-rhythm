@@ -45,7 +45,7 @@ ext install code-rhythm
 | @js_promise                 | promise基本示例                 |
 | @js_switch                  | switch                          |
 | @js_array.concat            | 数组合并                        |
-| @js_array.every             | 检测数组中所有元素是否都大于x值 |
+| @js_array.every             | 检测数组中所有元素是否都大于x值   |
 | @js_array.forEach           | 数据遍历                        |
 | @js_array.includes          | 数组是否包含某元素              |
 | @js_array.filter            | 数组返回符合指定条件的元素组    |
@@ -204,8 +204,8 @@ element-UI 常见UI组件
 
 | 快捷                        | 示例说明                        |
 | --------------------------- | -------------------------------|
-| @element_radio                   | 单选框                     |
-| @element_radio_group             | 单选框组                   |
+| @element_radio                   |  单选框                    |
+| @element_radio_group             |  单选框组                  |
 | @element_radio_group_button      |  按钮单选框组              |
 | @element_radio_border            |  带边框单选框组            |
 | @element_checkbox                |  多选框                   |
@@ -222,7 +222,7 @@ element-UI 常见UI组件
 | @element_date_picker             |  日期选择器                |
 | @element_date_rate               |  评级                     |
 | @element_color_picker            |  颜色选择器                |
-| @element_form_validate           |  颜色选择器                |
+| @element_form_validate           |  带验证表单                |
 | @element_table                   |  表格                      |
 | @element_table_multiple          |  多级表格                  |
 | @element_table_filter            |  可筛选表格                |
