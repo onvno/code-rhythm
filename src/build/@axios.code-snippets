@@ -1,37 +1,39 @@
 {
-    "@axios_get_base": {
-        "prefix": "@axios_get_base",
-        "body": [
-            "/* start axios_get_base */",
-            "// Make a request for a user with a given ID",
-            "axios.get('/user?ID=12345')",
-            "  .then(function (response) {",
-            "    console.log(response);",
-            "  })",
-            "  .catch(function (error) {",
-            "    console.log(error);",
-            "  });",
-            "/* end axios_get_base */"
-        ],
-        "description": "基本get"
-    },
-    "@axios_get_params": {
-        "prefix": "@axios_get_params",
-        "body": [
-            "/* start axios_get_params */",
-            "axios.get('/user', {",
-            "    params: {",
-            "      ID: 12345",
-            "    }",
-            "  })",
-            "  .then(function (response) {",
-            "    console.log(response);",
-            "  })",
-            "  .catch(function (error) {",
-            "    console.log(error);",
-            "  });",
-            "/* end axios_get_params */"
-        ],
-        "description": "get参数形式"
-    }
+	"@axios_get_base": {
+		"prefix": "@axios_get_base",
+		"body": [
+			"/* start axios_get_base */",
+			"// Make a request for a user with a given ID",
+			"axios.get('/user?ID=12345')",
+			".then(function (response) {",
+			"    console.log(response);",
+			"})",
+			".catch(function (error) {",
+			"    console.log(error);",
+			"});",
+			"",
+			"/* end axios_get_base */"
+		],
+		"description": "@axios_get_base"
+	},
+	"@axios_get_param": {
+		"prefix": "@axios_get_param",
+		"body": [
+			"/* start axios_get_param */",
+			"axios.get('/user', {",
+			"    params: {",
+			"        ID: 12345",
+			"    }",
+			"})",
+			".then(function (response) {",
+			"    console.log(response);",
+			"})",
+			".catch(function (error) {",
+			"    console.log(error);",
+			"});",
+			"",
+			"/* end axios_get_param */"
+		],
+		"description": "@axios_get_params"
+	}
 }

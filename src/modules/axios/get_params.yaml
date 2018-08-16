@@ -1,0 +1,14 @@
+prefix: "@axios_get_param"
+description: "@axios_get_params"
+body: |
+  axios.get('/user', {
+      params: {
+          ID: 12345
+      }
+  })
+  .then(function (response) {
+      console.log(response);
+  })
+  .catch(function (error) {
+      console.log(error);
+  });

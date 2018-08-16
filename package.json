@@ -14,7 +14,7 @@
         "Snippets"
     ],
     "test": [
-      "onCommand:extension.sayHello"
+        "onCommand:extension.sayHello"
     ],
     "activationEvents": [
         "*"
@@ -22,13 +22,16 @@
     "main": "./extension",
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
-        "vscode:uninstall": "node ./uninstall/index.js"
+        "vscode:uninstall": "node ./uninstall/index.js",
+        "build": "node ./src/convert.js"
     },
     "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6",
-        "eslint": "^4.11.0",
+        "@types/mocha": "^2.2.42",
         "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "eslint": "^4.11.0",
+        "fs-extra": "^7.0.0",
+        "js-yaml": "^3.12.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6"
     }
 }
