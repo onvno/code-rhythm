@@ -1,0 +1,26 @@
+-
+    prefix: '@utils_pattern_Decorator'
+    body: |-
+        // Decorator:装饰器 - 写了四种方法，参见博客
+        // 使用范围：不影响其本身接口，只是对其进行扩展。
+
+        var Base = function(str) {
+            this.name = str;
+            this.show = function(){
+                return this.name + ' wei'; 
+            }
+        }
+
+        var Person = function(str) {
+            Base.apply(this, arguments);
+            this.Decorations = {
+                show: function() {
+                    return this.show() + ' dong !';
+                }.bind(this)   
+            };
+        }
+
+        var person = new Person('lee');
+        console.log(person.show());
+        console.log(person.Decorations.show());
+    description: 装饰器：扩展现有接口

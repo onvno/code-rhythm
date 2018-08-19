@@ -1,26 +1,8 @@
 {
-	"@moment_date": {
-		"prefix": "@moment_date",
-		"body": [
-			"// 转为日期",
-			"moment().format('YYYY年MM月DD日 hh:mm:ss')"
-		],
-		"description": "转为日期"
-	},
-	"@moment_convert": {
-		"prefix": "@moment_convert",
-		"body": [
-			"// 转换为moment",
-			"moment.locale('zh-cn');",
-			"moment(\"12-25-1995\", \"MM-DD-YYYY\")",
-			"moment().subtract(1, 'days'); // 前一天",
-			"moment().add(1, 'days'); // 后一天"
-		],
-		"description": "转为moment"
-	},
 	"@moment_compare": {
 		"prefix": "@moment_compare",
 		"body": [
+			"/* start moment_compare */",
 			"/**",
 			" * 时间比较",
 			" * moment().isBefore(Moment|String|Number|Date|Array);",
@@ -28,8 +10,32 @@
 			" * moment().isAfter(Moment|String|Number|Date|Array);",
 			" */",
 			"moment('2010-10-20').isBefore('2011-10-20')",
-			"moment().isBefore(moment().subtract(90, 'days'))"
+			"moment().isBefore(moment().subtract(90, 'days'))",
+			"/* end moment_compare */"
 		],
 		"description": "日期比较"
+	},
+	"@moment_convert": {
+		"prefix": "@moment_convert",
+		"body": [
+			"/* start moment_convert */",
+			"// 转换为moment",
+			"moment.locale('zh-cn');",
+			"moment(\"12-25-1995\", \"MM-DD-YYYY\")",
+			"moment().subtract(1, 'days'); // 前一天",
+			"moment().add(1, 'days'); // 后一天",
+			"/* end moment_convert */"
+		],
+		"description": "转为moment"
+	},
+	"@moment_date": {
+		"prefix": "@moment_date",
+		"body": [
+			"/* start moment_date */",
+			"// 转为日期",
+			"moment().format('YYYY年MM月DD日 hh:mm:ss')",
+			"/* end moment_date */"
+		],
+		"description": "转为日期"
 	}
 }

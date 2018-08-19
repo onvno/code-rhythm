@@ -1,0 +1,16 @@
+-
+    prefix: '@js_array.splice'
+    body: |-
+        /**
+         * 插入删除，语法：
+         * array.splice(start)
+         * array.splice(start, deleteCount) 
+         * array.splice(start, deleteCount, item1, item2, ...)
+         */
+
+        var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+        myFish.splice(2, 0, 'drum'); // 在索引为2的位置插入'drum'
+        // myFish 变为 ["angel", "clown", "drum", "mandarin", "sturgeon"]
+        myFish.splice(2, 1); // 从索引为2的位置删除一项（也就是'drum'这一项）
+        // myFish 变为 ["angel", "clown", "mandarin", "sturgeon"]
+    description: 插入删除

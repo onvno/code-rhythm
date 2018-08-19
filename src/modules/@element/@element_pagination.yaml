@@ -1,0 +1,14 @@
+-
+    prefix: '@element_pagination'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/pagination -->
+        <div class="block">
+          <span class="demonstration">分页</span>
+          <el-pagination
+            :page-size="20"
+            :pager-count="11"
+            layout="prev, pager, next"
+            :total="1000">
+          </el-pagination>
+        </div>
+    description: 分页

@@ -1,0 +1,4 @@
+-
+    prefix: '@js_array.concat'
+    body: '${ary1}.concat(${ary2})'
+    description: 数组合并

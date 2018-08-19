@@ -1,0 +1,17 @@
+-
+    prefix: '@module_export'
+    body: |-
+        // 常规export
+        export {name1, name2};
+        export function FunctionName(){};
+        export class ClassName {};
+
+        // 导出默认值
+        export default expression;
+        export default function () {};
+        export { name1 as default, name2 }
+
+        // 从何处来到何处去
+        export { name1, name2 } from names;
+        export { import1 as name1, import2 as name2, nameN } from names;
+    description: es6模块导出

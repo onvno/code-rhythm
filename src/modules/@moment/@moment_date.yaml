@@ -1,0 +1,6 @@
+-
+    prefix: '@moment_date'
+    body: |-
+        // 转为日期
+        moment().format('YYYY年MM月DD日 hh:mm:ss')
+    description: 转为日期

@@ -1,0 +1,10 @@
+-
+    prefix: '@react_comp_func'
+    body: |-
+        import React from 'react';
+
+        const ${1:BaseComp} = () => (
+            <div>${2: Content}</div>
+        );
+        export default $1;
+    description: func无状态组件

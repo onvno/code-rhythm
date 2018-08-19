@@ -1,0 +1,8 @@
+-
+    prefix: '@js_array.foreach'
+    body: |-
+        const arr = ['a', 'b', 'c'];
+        arr.forEach(function(element, index, array) {
+            console.log(element, index, array);
+        });
+    description: 数据遍历

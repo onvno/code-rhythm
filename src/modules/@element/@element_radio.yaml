@@ -1,0 +1,7 @@
+-
+    prefix: '@element_radio'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/radio -->
+        <el-radio v-model="radio" label="1">单选框</el-radio>
+        <el-radio disabled v-model="radio" label="2">禁用单选框</el-radio>
+    description: 单选框

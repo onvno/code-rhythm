@@ -1,0 +1,7 @@
+-
+    prefix: '@js_string.replace'
+    body: |-
+        var re = /apples/gi;
+        var str = "Apples are round, and apples are juicy.";
+        var newstr = str.replace(re, "oranges");
+    description: 替换

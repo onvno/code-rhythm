@@ -1,0 +1,37 @@
+-
+    prefix: '@utils_pattern_chain'
+    body: |
+        /**
+         * 模拟jQuery链式写法:
+         * 1.实现创建对象隐藏new
+         * 2.演示如何操作dom
+         * @param {dom} selector 
+         */
+        var BB = function(selector, context) {
+            return new BB.fn.init(selector, context);
+        }
+        BB.fn = {
+            init: function(selector, context){
+                console.log('init');
+                this.doms = document.getElementsByTagName(selector);
+                return this;
+            },
+            toArray: function() {
+                console.log('toArray');
+                return this;
+            },
+            showList: function() {
+                console.log(this.doms.length);
+                return this;
+            },
+            extend: function(obj){
+                // 以下代码未考虑objKey存在以及obj[objKey]不为函数的情况
+                for(var key in obj) {
+                    this[key] = obj[key];
+                }
+            }   
+        }
+        BB.fn.init.prototype = BB.fn
+        BB.fn.extend({'myAdd': function(a,b){console.log(a + b); return this}})
+        BB('span').toArray().showList().myAdd(2,3);
+    description: 链式写法

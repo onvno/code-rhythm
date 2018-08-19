@@ -1,0 +1,8 @@
+-
+    prefix: '@js_object.hasOwnProperty'
+    body: |-
+        // obj属性判断
+        var obj = {name:'jack'};
+        obj.hasOwnProperty('name'); // --> true
+        obj.hasOwnProperty('toString'); // --> false
+    description: 对象是否有某属性

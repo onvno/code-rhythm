@@ -1,0 +1,18 @@
+-
+    prefix: '@react_comp_cycle'
+    body: |-
+        // lifecycle
+
+        // first load
+        componentWillMount() {}
+        componentDidMount() {}
+
+        // update
+        componentWillReceiveProps() {}
+        shouldComponentUpdate() {}
+        componentWillUpdate() {}
+        componentDidUpdate() {}
+
+        // uninstall
+        componentWillUnmount() {}
+    description: 组件生命周期

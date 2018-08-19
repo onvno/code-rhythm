@@ -1,0 +1,6 @@
+-
+    prefix: js_object_string
+    body: |-
+        const test = {a: 123};
+        const str = JSON.stringify(test);
+    description: obj转为string

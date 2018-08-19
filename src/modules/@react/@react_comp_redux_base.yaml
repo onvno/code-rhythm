@@ -1,0 +1,33 @@
+-
+    prefix: '@react_comp_redux_base'
+    body: |-
+        import React, {Component} from 'react';
+        import {Icon} from 'antd';
+        import {connect} from 'react-redux';
+        import {showWindow} from 'root/redux/dataList/action';
+        class CreateCard extends Component {
+            render() {
+                const {showWindow, show} = this.props;
+                return (
+                    <div className="datalist-box" onClick={showWindow}>
+                        <Icon
+                            type="plus"
+                            style={{ fontSize: 16, color: '#08c' }}
+                        />
+                        <span>创建数据集</span>
+                        <span>"{this.props.show}"</span>
+                    </div>
+                )
+            }
+        }
+        const mapStateToProps = (state) => ({
+            show: state.dataList.showWindow
+        })
+        const mapDispatchToProps = (dispatch) => ({
+            showWindow:  ()=> dispatch(showWindow())
+        })
+        export default connect(
+            mapStateToProps,
+            mapDispatchToProps
+        )(CreateCard)
+    description: 原始redux组件

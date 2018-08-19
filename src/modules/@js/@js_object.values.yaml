@@ -1,0 +1,6 @@
+-
+    prefix: '@js_object.values'
+    body: |-
+        var obj = { foo: "bar", baz: 42 };
+        console.log(Object.values(obj)); // ['bar', 42]
+    description: 返回数组：可枚举对象的values

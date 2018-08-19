@@ -1,0 +1,13 @@
+-
+    prefix: '@utils_pattern_facade'
+    body: |-
+        /**
+         * facade - 面子模式（外套模式），基本不用讲：套个外套，打扮的人模人样的
+         * 一个方法由多个方法组成，做一个抽象
+         */
+
+        var stopEvent = function( e ){   //同时阻止事件默认行为和冒泡
+            e.stopPropagation();
+            e.preventDefault();
+        }
+    description: '外套模式,人模狗样'

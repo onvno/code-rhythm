@@ -2,6 +2,7 @@
 	"@module_export": {
 		"prefix": "@module_export",
 		"body": [
+			"/* start module_export */",
 			"// 常规export",
 			"export {name1, name2};",
 			"export function FunctionName(){};",
@@ -14,13 +15,15 @@
 			"",
 			"// 从何处来到何处去",
 			"export { name1, name2 } from names;",
-			"export { import1 as name1, import2 as name2, nameN } from names;"
+			"export { import1 as name1, import2 as name2, nameN } from names;",
+			"/* end module_export */"
 		],
 		"description": "es6模块导出"
 	},
 	"@module_import": {
 		"prefix": "@module_import",
 		"body": [
+			"/* start module_import */",
 			"import defaultExport from \"module-name\";",
 			"import * as name from \"module-name\";",
 			"",
@@ -30,30 +33,35 @@
 			"import { export1 , export2 as alias2} from \"module-name\";",
 			"",
 			"// 其他",
-			"import \"module-name\";"
+			"import \"module-name\";",
+			"/* end module_import */"
 		],
 		"description": "es6模块导入"
+	},
+	"@module_node_exports": {
+		"prefix": "@module_node_exports",
+		"body": [
+			"/* start module_node_exports */",
+			"var addX = function (value) {",
+			"  return value + x;",
+			"};",
+			"module.exports = addX;",
+			"/* end module_node_exports */"
+		],
+		"description": "cmd导出默认模块"
 	},
 	"@module_node_exports_children": {
 		"prefix": "@module_node_exports_children",
 		"body": [
+			"/* start module_node_exports_children */",
 			"var x = 5;",
 			"var addX = function (value) {",
 			"  return value + x;",
 			"};",
 			"module.exports.x = x;",
-			"module.exports.addX = addX;"
+			"module.exports.addX = addX;",
+			"/* end module_node_exports_children */"
 		],
 		"description": "cmd导出子属性"
-	},
-	"@module_node_exports": {
-		"prefix": "@module_node_exports",
-		"body": [
-			"var addX = function (value) {",
-			"  return value + x;",
-			"};",
-			"module.exports = addX;"
-		],
-		"description": "cmd导出默认模块"
-	},
+	}
 }

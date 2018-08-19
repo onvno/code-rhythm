@@ -1,0 +1,7 @@
+-
+    prefix: '@reg_chinese'
+    body: |-
+        //匹配中文字符的正则表达式
+        var re = /[\u4e00-\u9fa5]/
+        re.test('中');
+    description: 中文

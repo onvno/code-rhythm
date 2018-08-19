@@ -1,0 +1,12 @@
+-
+    prefix: '@js_async_promise_all'
+    body: |-
+        // promise.all 处理并发异步请求
+        async function dbFuc(db) {
+          let docs = [{}, {}, {}];
+          let promises = docs.map((doc) => db.post(doc));
+
+          let results = await Promise.all(promises);
+          console.log(results);
+        }
+    description: 混合处理并发

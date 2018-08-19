@@ -1,0 +1,13 @@
+-
+    prefix: '@js_async_all'
+    body: |-
+        // async 并发处理
+        var func = async () => {
+          var ary = ['opt1', 'opt2', 'opt3'];
+          var resAry = [];
+          for(var i=0; i<ary.length; i++) {
+            resAry[i] = await post_async(ary[i]);
+          }
+          console.log(resAry)
+        }
+    description: async并发

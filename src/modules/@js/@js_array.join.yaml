@@ -1,0 +1,17 @@
+-
+    prefix: '@js_array.join'
+    body: |-
+        let a = ['Wind', 'Rain', 'Fire'];
+
+        console.log(a.join()); 
+        // 默认为 ","
+        // 'Wind,Rain,Fire'
+
+        console.log(a.join("")); 
+        // 分隔符 === 空字符串 ""
+        // "WindRainFire"
+
+        console.log(a.join("-")); 
+        // 分隔符 "-"
+        // 'Wind-Rain-Fire'
+    description: 转为字符串

@@ -1,0 +1,10 @@
+-
+    prefix: '@element_tag'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/tag -->
+        <el-tag>标签一</el-tag>
+        <el-tag type="success">success</el-tag>
+        <el-tag type="info">info</el-tag>
+        <el-tag type="warning">warning</el-tag>
+        <el-tag type="danger">danger</el-tag>
+    description: 标签

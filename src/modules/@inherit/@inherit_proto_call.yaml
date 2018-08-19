@@ -1,0 +1,38 @@
+-
+    prefix: '@inherit_proto_call'
+    body: >-
+        function ${1:Shape}() {
+            this.x = 0;
+            this.y = 0;
+        }
+
+
+        // 父类的方法
+
+        $1.prototype.move = function(x, y) {
+            this.x += x;
+            this.y += y;
+            console.info('Shape moved.');
+        };
+
+
+        // Rectangle - 子类(subclass)
+
+        function ${2:Rectangle}() {
+            // call实现了es6 class构造方法constructor中
+            Shape.call(this); // call super constructor.
+        }
+
+
+        // 子类续承父类
+
+        $2.prototype = Object.create($1.prototype);
+
+        // 如不执行下一句，则Rectangle.prototype.constructor ==
+        Shape,即为Shape.prototype.constructor
+
+        $2.prototype.constructor = $2;
+
+
+        var rect = new $2();
+    description: call绑定构造函数式继承

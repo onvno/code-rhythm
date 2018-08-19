@@ -1,0 +1,7 @@
+-
+    prefix: '@react_import_img'
+    body: |-
+        // import png
+        import xxx from './xxx.png'
+        <img src={xxx} />
+    description: import图片

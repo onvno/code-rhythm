@@ -1,0 +1,31 @@
+-
+    prefix: '@js_array.+-'
+    body: |-
+        /**
+         * 删
+         */
+        // 删最后一个 - pop
+        let a = [1, 2, 3];
+        a.pop(); // 3
+        console.log(a); // [1, 2]
+
+        // 删第一个 - shift
+        let a = [1, 2, 3];
+        let b = a.shift();
+        console.log(a); 
+        // [2, 3]
+
+
+        /**
+         * 增
+         */
+        // 增最后一个 - push
+        var numbers = [1, 2, 3, 4];
+        numbers.push(5, 6, 7);
+        // [1, 2, 3, 4, 5, 6, 7]
+
+        // 增第一个 - unshift
+        let a = [1, 2, 3];
+        a.unshift(4, 5);
+        // [4,5,1,2,3]
+    description: 增删

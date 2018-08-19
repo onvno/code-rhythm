@@ -1,0 +1,9 @@
+-
+    prefix: '@js_array.from'
+    body: |-
+        // 类数组转化为数组，mapFn为回调函数
+        // Array.from(arrayLike, mapFn, thisArg)
+
+        Array.from('foo');
+        // ["f", "o", "o"]
+    description: 类数组转为数组

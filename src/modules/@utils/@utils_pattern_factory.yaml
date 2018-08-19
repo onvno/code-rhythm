@@ -1,0 +1,49 @@
+-
+    prefix: '@utils_pattern_factory'
+    body: |-
+        // 工厂模式：封装一类对象，可实例化出一类既可以有共有属性方法，又能有自己独特属性的模式
+        // 目的:简化创建每一个对象都需要单独new一个，现在工厂模式只需要一个入口即可
+        // 不是叫学校模式更好吗？学校出来的人各式各样
+
+        // define
+        function Factory() {
+            this.createEmployee = function(type) {
+                var employee;
+                if ( type === 'fulltime' ) {
+                    employee = new FullTime();
+                }
+                else if ( type === 'parttime' ) {
+                    employee = new PartTime();
+                }
+                else if ( type === 'temporary' ) {
+                    employee = new Temporary();
+                }
+
+                employee.type = type;
+                employee.say = function() {
+                    console.log(this.type + ": rate " + this.hourly + "/hour");
+                }
+
+                return employee;
+            }
+        }
+        var FullTime = function() {
+            this.hourly = "";
+        }
+        var PartTime = function() {
+            this.hourly = "";
+        }
+        var Temporary = function() {
+            this.hourly = "";
+        }
+
+        // use
+        var employees = [];
+        var factory = new Factory();
+        employees.push(factory.createEmployee('fulltime'));
+        employees.push(factory.createEmployee('parttime'));
+        employees.push(factory.createEmployee('temporary'));
+        employees.forEach(element => {
+            console.log(element);
+        });
+    description: 工厂模式

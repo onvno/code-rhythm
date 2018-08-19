@@ -1,0 +1,7 @@
+-
+    prefix: '@reg_mobile'
+    body: |-
+        //验证手机号
+        var re = /^1[3|5|8|7]\d{9}$/;
+        console.log(re.test(18818818888))
+    description: 手机

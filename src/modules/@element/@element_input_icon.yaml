@@ -1,0 +1,31 @@
+-
+    prefix: '@element_input_icon'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/input -->
+        <div class="demo-input-suffix">
+          属性方式:
+          <el-input
+            placeholder="请选择日期"
+            suffix-icon="el-icon-date"
+            v-model="input2">
+          </el-input>
+          <el-input
+            placeholder="请输入内容"
+            prefix-icon="el-icon-search
+            v-model="input21">
+          </el-input>
+        </div>
+        <div class="demo-input-suffix">
+          slot 方式：
+          <el-input
+            placeholder="请选择日期"
+            v-model="input22">
+           <i slot="suffix" class="el-input__icon el-icon-date"></i>
+          </el-input>
+          <el-input
+            placeholder="请输入内容"
+            v-model="input23">
+            <i slot="prefix" class="el-input__icon el-icon-search"></i>
+          </el-input>
+        </div>
+    description: 带图标输入框

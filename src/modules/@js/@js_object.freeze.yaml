@@ -1,0 +1,7 @@
+-
+    prefix: '@js_object.freeze'
+    body: |-
+        // 冻结对象不能修改
+        let a=[0];
+        Object.freeze(a);
+    description: 冻结对象不能修改

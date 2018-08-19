@@ -1,0 +1,10 @@
+-
+    prefix: '@inherit_base_create'
+    body: |
+        // 无构造，无函数，直接对象继承
+        // 可用于创建新对象
+        var Base = { a : 2};
+        var obj = Object.create(Base);
+        console.log(obj.a);
+        console.log(obj.__proto__ == Base);
+    description: 继承Object，无需new

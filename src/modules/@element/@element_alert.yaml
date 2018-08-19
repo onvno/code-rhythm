@@ -1,0 +1,24 @@
+-
+    prefix: '@element_alert'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/alert -->
+        <el-alert
+          title="成功提示的文案"
+          type="success">
+        </el-alert>
+        <el-alert
+          title="消息提示的文案"
+          show-icon
+          type="info">
+        </el-alert>
+        <el-alert
+          title="警告提示的文案"
+          center
+          type="warning">
+        </el-alert>
+        <el-alert
+          title="错误提示的文案"
+          description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰挥发化为灰……">
+          type="error">
+        </el-alert>
+    description: 警告

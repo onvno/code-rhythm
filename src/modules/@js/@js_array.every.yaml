@@ -1,0 +1,9 @@
+-
+    prefix: '@js_array.every'
+    body: |-
+        // 检测数组所有元素是否大于10, 大于则passed = true
+        function isBigEnough(element, index, array) {
+            return (element >= 10);
+          }
+        var passed = [12, 5, 8, 130, 44].every(isBigEnough);
+    description: 检测数组中所有元素是否都大于x值

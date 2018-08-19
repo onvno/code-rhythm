@@ -1,0 +1,16 @@
+-
+    prefix: '@inherit_base_proto'
+    body: |-
+        function ${1:Graph}() {
+            this.vertices = [];
+            this.edges = [];
+        }
+          
+        $1.prototype = {
+            addVertex: function(v){
+                this.vertices.push(v);
+            }
+        };
+          
+        var ${2:demo} = new $1();
+    description: proto基本继承

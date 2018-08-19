@@ -1,0 +1,19 @@
+-
+    prefix: '@element_select'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/select -->
+        <!-- 已添加clearable(可清除) filterable(可输入) -->
+        <el-select v-model="value" placeholder="请选择" clearable filterable>
+          <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
+        <!-- option: -->
+        options: [{
+          value: '选项1',
+          label: '黄金糕'
+        }]
+    description: 选择框

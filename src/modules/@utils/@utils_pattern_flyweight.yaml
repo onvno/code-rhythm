@@ -1,0 +1,48 @@
+-
+    prefix: '@utils_pattern_flyweight'
+    body: |-
+        /**
+         * Flyweight - 享元模式，用于项目优化：将重复的出现抽取并缓存起来
+         * 适用于创建大数据量时使用
+         * 包含了proxy缓存这部分思想
+         * 这个模式应该字面直接翻译：飞一般清爽
+         */
+        // 
+        // 
+
+        // 以下例子如创建一台iphone
+        // model,screen,memory的属性就那几个，所以一旦要创建上万个iphone对象，每次都要创建这几个属性开销就太浪费
+        // 不如将他们组合出现的几种情况，遇到了就保存起来，以后直接拿来用即可
+        // 而SN码因为每台都不一样，需要单独创建
+
+        // define
+        function PhoneBaseAttr(model, screen, memory) {
+            this.model = model;
+            this.screen = screen;
+            this.memory = memory;
+        }
+        var PhoneFactory = (function(){
+            var phone = {};
+            return function(model, screen, memory) {
+                var key = model + screen + memory;
+                if(!phone[key]){
+                    return phone[key] = new PhoneBaseAttr(model, screen, memory);
+                } else {
+                    console.log('已缓存');
+                    return phone[key];
+                }
+            }
+        })()
+        function Phone(model, screen, memory, SN) {
+            this.base = PhoneFactory(model, screen, memory);
+            this.SN = SN;
+        }
+
+        // use
+        var phones = [];
+        for(var i=0; i< 100; i++) {
+            var memory = i % 2 == 0 ? 16 : 32;
+            phones.push(new Phone("iphone6s", 5.0, memory, i))
+        }
+        console.log(phones);
+    description: '合并重复,非一般清爽'

@@ -1,0 +1,6 @@
+-
+    prefix: '@react_online_redux_action'
+    body: |-
+        // redux-action 写法
+        // https://codepen.io/onvno/pen/eMJLMg
+    description: redux-action在线demo

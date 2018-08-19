@@ -1,0 +1,19 @@
+-
+    prefix: '@react_comp_constructor'
+    body: |-
+        import React, {Component} from 'react';
+
+        class $1 extends Component {
+            constructor(props) {
+                super(props);
+                this.state = { $2 };
+            }
+            render() {
+                return (
+                $3
+                );
+            }
+        }
+          
+        export default $1;
+    description: base组件

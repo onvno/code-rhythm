@@ -1,0 +1,19 @@
+-
+    prefix: '@utils_data_type'
+    body: |-
+        const toString = Object.prototype.toString;
+
+        toString.call(new Date);    // [object Date]
+        toString.call(new String);  // [object String]
+        toString.call(Math);        // [object Math]
+        toString.call(3);           // [object Number]
+        toString.call([]);          // [object Array]
+        toString.call({});          // [object Object]
+
+        // Since JavaScript 1.8.5
+        toString.call(undefined);   // [object Undefined]
+        toString.call(null);        // [object Null]
+
+        toString.call(new Map); // [object Map]
+        toString.call(new Set); // [object Set]
+    description: 判断数据类型

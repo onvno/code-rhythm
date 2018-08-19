@@ -1,0 +1,8 @@
+-
+    prefix: '@js_array.map'
+    body: |-
+        let numbers = [1, 5, 10, 15];
+        let doubles = numbers.map( x => x ** 2);
+        // doubles is now [1, 25, 100, 225]
+        // numbers is still [1, 5, 10, 15]
+    description: 遍历返回新数组

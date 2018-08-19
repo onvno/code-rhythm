@@ -1,0 +1,79 @@
+-
+    prefix: '@react_comp_stateless_withrouter'
+    body: >-
+        import React from 'react';
+
+        import PropTypes from 'prop-types';
+
+        import {Button, Icon, message} from 'antd';
+
+        import {withRouter} from 'react-router';
+
+
+        import './index.less';
+
+
+
+        const goBackList = (history, resetData) => {
+            return ()=>{
+                // history.goBack();
+                resetData();
+                history.push('/sourceAdd');
+            }
+        }
+
+
+
+        const C = ({projectName, dimension, target, selectInfo, history,
+        resetData}) => (
+            <head className="source-head">
+                <div className="back-zone">
+                    <Icon
+                        type="left"
+                        style={{ fontSize: 16, color: '#08c' }}
+                        onClick={goBackList(history, resetData)}
+                    />
+                </div>
+                <div className="title-zone">{projectName}</div>
+                <div className="btn-zone">
+                    <Button onClick={goBackList(history, resetData)}>取消</Button>
+                    <Button 
+                        type="primary"
+                        onClick={
+                            (e) => {
+                                if(dimension.length === 0 || target.length === 0 ) {
+                                    message.error('维度和指标不能为空!');
+                                } else {
+                                    message.success('可以发送请求了!');
+                                    console.log(
+                                        '发送请求需要的字段',
+                                        '\n选择的数据表:',selectInfo[0].id,
+                                        '\n项目名:',projectName,
+                                        '\n维度:', dimension,
+                                        '\n指标:', target,
+                                    )
+                                    // 发请求保存修改或增加数据集
+                                }
+                            }
+                        }
+                    >
+                        保存
+                    </Button>
+                </div>
+            </head>
+            
+        );
+
+
+
+        C.propTypes = {
+            projectName: PropTypes.string.isRequired,
+            dimension: PropTypes.array.isRequired,
+            target: PropTypes.array.isRequired
+        };
+
+
+        const EditHeader = withRouter(C);
+
+        export default EditHeader;
+    description: 无状态组件获取history

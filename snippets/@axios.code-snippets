@@ -1,7 +1,24 @@
 {
+	"@axios_async": {
+		"prefix": "@axios_async",
+		"body": [
+			"/* start axios_async */",
+			"async function getUser() {",
+			"    try {",
+			"        const response = await axios.get('/user?ID=12345');",
+			"        console.log(response);",
+			"    } catch (error) {",
+			"        console.error(error);",
+			"    }",
+			"}",
+			"/* end axios_async */"
+		],
+		"description": "es7异步写法"
+	},
 	"@axios_get_base": {
 		"prefix": "@axios_get_base",
 		"body": [
+			"/* start axios_get_base */",
 			"// Make a request for a user with a given ID",
 			"axios.get('/user?ID=12345')",
 			"  .then(function (response) {",
@@ -9,13 +26,15 @@
 			"  })",
 			"  .catch(function (error) {",
 			"    console.log(error);",
-			"  });"
+			"  });",
+			"/* end axios_get_base */"
 		],
 		"description": "基本get"
 	},
 	"@axios_get_params": {
 		"prefix": "@axios_get_params",
 		"body": [
+			"/* start axios_get_params */",
 			"axios.get('/user', {",
 			"    params: {",
 			"      ID: 12345",
@@ -26,27 +45,15 @@
 			"  })",
 			"  .catch(function (error) {",
 			"    console.log(error);",
-			"  });"
+			"  });",
+			"/* end axios_get_params */"
 		],
 		"description": "get参数形式"
-	},
-	"@axios_async": {
-		"prefix": "@axios_async",
-		"body": [
-			"async function getUser() {",
-			"    try {",
-			"        const response = await axios.get('/user?ID=12345');",
-			"        console.log(response);",
-			"    } catch (error) {",
-			"        console.error(error);",
-			"    }",
-			"}"
-		],
-		"description": "es7异步写法"
 	},
 	"@axios_post_base": {
 		"prefix": "@axios_post_base",
 		"body": [
+			"/* start axios_post_base */",
 			"axios.post('/user', {",
 			"    firstName: 'Fred',",
 			"    lastName: 'Flintstone'",
@@ -56,13 +63,31 @@
 			"  })",
 			"  .catch(function (error) {",
 			"    console.log(error);",
-			"  });"
+			"  });",
+			"/* end axios_post_base */"
 		],
 		"description": "基本post"
+	},
+	"@axios_response_list": {
+		"prefix": "@axios_response_list",
+		"body": [
+			"/* start axios_response_list */",
+			"axios.get('/user/12345')",
+			"  .then(function(response) {",
+			"    console.log(response.data);",
+			"    console.log(response.status);",
+			"    console.log(response.statusText);",
+			"    console.log(response.headers);",
+			"    console.log(response.config);",
+			"  });",
+			"/* end axios_response_list */"
+		],
+		"description": "返回列表"
 	},
 	"@axios_whole_config": {
 		"prefix": "@axios_whole_config",
 		"body": [
+			"/* start axios_whole_config */",
 			"axios({",
 			"    // `url` is the server URL that will be used for the request",
 			"    url: '/user',",
@@ -211,22 +236,9 @@
 			"    // (see Cancellation section below for details)",
 			"    cancelToken: new CancelToken(function (cancel) {",
 			"    })",
-			"  })"
+			"  })",
+			"/* end axios_whole_config */"
 		],
 		"description": "完整配置"
-	},
-	"@axios_response_list": {
-		"prefix": "@axios_response_list",
-		"body": [
-			"axios.get('/user/12345')",
-			"  .then(function(response) {",
-			"    console.log(response.data);",
-			"    console.log(response.status);",
-			"    console.log(response.statusText);",
-			"    console.log(response.headers);",
-			"    console.log(response.config);",
-			"  });"
-		],
-		"description": "返回列表"
-	},
+	}
 }

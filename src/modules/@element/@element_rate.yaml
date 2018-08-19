@@ -1,0 +1,23 @@
+-
+    prefix: '@element_rate'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/rate -->
+        <div class="block">
+          <span class="demonstration">默认不区分颜色</span>
+         <el-rate v-model="value1"></el-rate>
+        </div>
+        <div class="block">
+          <span class="demonstration">区分颜色</span>
+          <el-rate
+            v-model="value2"
+            :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
+         </el-rate>
+        </div>
+        <div class="block">
+          <span class="demonstration">辅助文字</span>
+          <el-rate
+            v-model="value2"
+            show-text
+          </el-rate>
+        </div>
+    description: 评级

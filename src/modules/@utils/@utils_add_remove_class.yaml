@@ -1,0 +1,6 @@
+-
+    prefix: '@utils_add_remove_class'
+    body: |-
+        document.getElementById("div").classList.add("className");
+        document.getElementById("div").classList.remove("className");
+    description: 增加删除类

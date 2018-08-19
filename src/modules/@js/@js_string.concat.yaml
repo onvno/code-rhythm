@@ -1,0 +1,4 @@
+-
+    prefix: '@js_string.concat'
+    body: '${1:str1}.concat(${2:str2},${3:str3})'
+    description: 合并字符串

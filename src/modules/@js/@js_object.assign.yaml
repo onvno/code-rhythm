@@ -1,0 +1,11 @@
+-
+    prefix: '@js_object.assign'
+    body: |-
+        // 合并 & 复制属性
+        var o1 = { a: 1, b: 1, c: 1 };
+        var o2 = { b: 2, c: 2 };
+        var o3 = { c: 3 };
+
+        var obj = Object.assign({}, o1, o2, o3);
+        // { a: 1, b: 2, c: 3 }
+    description: 拷贝&覆盖属性

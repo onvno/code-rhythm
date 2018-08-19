@@ -1,0 +1,13 @@
+-
+    prefix: '@js_array.slice'
+    body: |-
+        // 浅拷贝：包含索引开始，不包含结束索引
+        arr.slice();
+        // [0, end]
+
+        arr.slice(begin);
+        // [begin, end]
+
+        arr.slice(begin, end);
+        // [begin, end)
+    description: 拷贝

@@ -1,0 +1,9 @@
+-
+    prefix: '@react_import'
+    body: |-
+        import React, {Component} from 'react';
+        import PropTypes from 'prop-types';
+        import {bindActionCreators} from 'redux';
+        import {connect} from 'react-redux';
+        import {Provider} from 'react-redux';
+    description: import

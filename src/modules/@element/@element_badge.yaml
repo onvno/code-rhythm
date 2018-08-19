@@ -1,0 +1,8 @@
+-
+    prefix: '@element_badge'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/badge -->
+        <el-badge :value="200" :max="99" class="item">
+          <el-button size="small">评论</el-button>
+        </el-badge>
+    description: 标记

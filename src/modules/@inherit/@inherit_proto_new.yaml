@@ -1,0 +1,26 @@
+-
+    prefix: '@inherit_proto_new'
+    body: |-
+        function ${1:Shape}(x, y) {
+            this.base = '$1';
+        }
+
+        // 父类的方法
+        $1.prototype.move = function(x, y) {
+            this.x += x;
+            this.y += y;
+            console.info('$1 moved.');
+        };
+
+        // Rectangle - 子类(subclass)
+        function ${2:Rectangle}(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        // 子类续承父类
+        $2.prototype = new $1();
+        $2.prototype.constructor = $2;
+
+        var rect = new $2(2,3);
+    description: new式继承

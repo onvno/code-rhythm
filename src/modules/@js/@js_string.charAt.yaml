@@ -1,0 +1,7 @@
+-
+    prefix: '@js_string.charAt'
+    body: |-
+        // charAt() 方法从一个字符串中返回指定的字符。
+        // str.charAt(index)
+        'thisIsaString'.charAt(0)
+    description: 字符串指定索引内容

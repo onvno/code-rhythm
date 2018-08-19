@@ -1,0 +1,112 @@
+-
+    prefix: '@antd_table_base'
+    body: |
+        import React, { Component } from "react";
+        import { Link, withRouter } from "react-router-dom";
+        import { Button, Icon, Table } from "antd";
+        import { connect } from "react-redux";
+        import pureRender from "pure-render-decorator";
+        import actions from "difc/action/myServices/serviceState";
+        import "./index.less";
+
+        @pureRender
+        class BaseTable extends Component {
+          constructor(props) {
+            super(props);
+            this.state = {};
+          }
+          componentWillMount() {}
+          componentWillReceiveProps(nextProps) {
+          }
+          columnsConfig = () => {
+            return [
+              {
+                title: "序号",
+                width: 60,
+                key: "index",
+                render: (text, record, index) => {
+                  return index + 1;
+                }
+              },
+              {
+                title: "实例",
+                dataIndex: "name",
+                key: "name",
+                width: "20%",
+                render: text => {
+                  return text;
+                }
+              },
+              {
+                title: "运行状态",
+                dataIndex: "isOk",
+                key: "isOk",
+                render: text => {
+                  let className = text === 1 ? "circle" : "circle stop";
+                  return (
+                    <div>
+                      <span className={className} />
+                      {ServiceRunStatus[text]}
+                    </div>
+                  );
+                }
+              },
+              {
+                title: "分组名",
+                dataIndex: "hostname",
+                key: "hostname",
+                width: "20%",
+                render: text => {
+                  return text;
+                }
+              },
+              {
+                title: "运行版本",
+                dataIndex: "versions",
+                key: "versions",
+                width: "20%",
+                render: list => {
+                  let element = null;
+                  return list.map((item, index) => {
+                    return <div key={index}>{item.version}</div>;
+                  });
+                }
+              }
+            ];
+          };
+          renderDataContent = () => {
+            const dataSource = [{
+              name: 'aaa',
+              isOk: 1,
+              hostname: '127.0.0.1',
+              versions: [1,2,3]
+            }, {
+              isOk: 0,
+              hostname: '127.0.0.1',
+              versions: [2,3,4]
+            }];
+            let tableParams = {
+              name: 'bbb',
+              pagination: false,
+              dataSource: dataSource,
+              columns: this.columnsConfig(),
+              rowKey: (record, index) => {
+                return index;
+              }
+            };
+            return (
+                  <Table className="table-style" {...tableParams} />
+            );
+          };
+
+          render() {
+            return <div id="ServiceState">{this.renderDataContent()}</div>;
+          }
+        }
+        export default connect(state => {
+          return {
+            ...state.myServices,
+            ...state.difCommon
+          };
+        }, actions)(withRouter(BaseTable));
+    description: 基本表格

@@ -1,0 +1,21 @@
+-
+    prefix: _build_Object.create
+    body: |-
+        // Crockford JS精粹部分的Object.Create的实现
+
+        Object.beget = function(o){
+            var F= function(){};
+            F.prototype=o;
+            return new F()
+        }
+
+        var base = {
+            "first":"lee",
+            "last":" wei",
+            "full": function(){
+                console.log(this.first + this.last)
+            }
+        };
+        var sub = Object.beget(base);
+        // sub.__proto__ == F.prototype == base
+    description: 实现方式

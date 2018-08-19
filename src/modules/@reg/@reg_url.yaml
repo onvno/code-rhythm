@@ -1,0 +1,6 @@
+-
+    prefix: '@reg_url'
+    body: |-
+        var re = /^http(s):\/\/.+\./;
+        re.test('https://www.baidu.com')
+    description: url

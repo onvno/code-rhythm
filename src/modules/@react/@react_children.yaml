@@ -1,0 +1,32 @@
+-
+    prefix: '@react_children'
+    body: |-
+        import React, {Component} from 'react';
+        import ReactDOM from 'react-dom';
+
+        class NotesList extends Component {
+          constructor(props) {
+            super(props);
+          }
+
+          render() {
+            return (
+              <ul>
+                {
+                  React.Children.map(this.props.children, function(child) {
+                    return <li>{child}</li>
+                  })
+                }
+              </ul>
+            )
+          }
+        }
+
+        ReactDOM.render(
+          <NotesList>
+            <span>hello</span>
+            <span>world</span>
+          </NotesList>,
+          document.getElementById('root')
+        );
+    description: 包含子组件写法

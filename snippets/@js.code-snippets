@@ -1,122 +1,8 @@
 {
-	"@js_promise": {
-		"prefix": "@js_promise",
-		"body": [
-			"var ${name} = new Promise((resolve,reject)=>{",
-			"    if (condition) {",
-			"        resolve(val);",
-			"    } else {",
-			"        reject(err);",
-			"    }",
-			"})",
-			"${name}",
-			"  .then(step2)",
-			"  .then(step3)",
-			"  .catch((err)=>{console.log(err)})"
-		],
-		"description": "pros"
-	},
-	"@js_switch": {
-		"prefix": "@js_switch",
-		"body": [
-			"switch(n) {",
-			"    case 1:",
-			"        // code content",
-			"        break;",
-			"    case 2:",
-			"        // code content",
-			"        break;",
-			"    default:",
-			"        // last code",
-			"}"
-		],
-		"description": "switch"
-	},
-	"@js_array.concat": {
-		"prefix": "@js_array.concat",
-		"body": [
-			"${ary1}.concat(${ary2})"
-		],
-		"description": "数组合并"
-	},
-	"@js_array.every": {
-		"prefix": "@js_array.every",
-		"body": [
-			"// 检测数组所有元素是否大于10, 大于则passed = true",
-			"function isBigEnough(element, index, array) {",
-			"    return (element >= 10);",
-			"  }",
-			"var passed = [12, 5, 8, 130, 44].every(isBigEnough);"
-		],
-		"description": "检测数组中所有元素是否都大于x值"
-	},
-	"@js_array.forEach": {
-		"prefix": "@js_array.foreach",
-		"body": [
-			"const arr = ['a', 'b', 'c'];",
-			"arr.forEach(function(element, index, array) {",
-			"    console.log(element, index, array);",
-			"});"
-		],
-		"description": "数据遍历"
-	},
-	"@js_array.includes": {
-		"prefix": "@js_array.includes",
-		"body": [
-			"${ary}.includes(2);"
-		],
-		"description": "数组是否包含某元素"
-	},
-	"@js_array.filter": {
-		"prefix": "@js_array.filter",
-		"body": [
-			"function isBigEnough(value) {",
-			"    return value >= 10;",
-			"}  ",
-			"var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);",
-			"// filtered is [12, 130, 44]"
-		],
-		"description": "数组返回符合指定条件的元素组"
-	},
-	"@js_array.indexOf": {
-		"prefix": "@js_array.indexOf",
-		"body": [
-			"${ary}.indexOf(2);"
-		],
-		"description": "数组指定元素的序列"
-	},
-	"@js_array.join": {
-		"prefix": "@js_array.join",
-		"body": [
-			"let a = ['Wind', 'Rain', 'Fire'];",
-			"",
-			"console.log(a.join()); ",
-			"// 默认为 \",\"",
-			"// 'Wind,Rain,Fire'",
-			"",
-			"console.log(a.join(\"\")); ",
-			"// 分隔符 === 空字符串 \"\"",
-			"// \"WindRainFire\"",
-			"",
-			"console.log(a.join(\"-\")); ",
-			"// 分隔符 \"-\"",
-			"// 'Wind-Rain-Fire'"
-		],
-		"description": "转为字符串"
-	},
-	"@js_array.map": {
-		"prefix": "@js_array.map",
-		"body": [
-			"let numbers = [1, 5, 10, 15];",
-			"let doubles = numbers.map( x => x ** 2);",
-			"// doubles is now [1, 25, 100, 225]",
-			"// numbers is still [1, 5, 10, 15]"
-		],
-		"description": "遍历返回新数组"
-	},
 	"@js_array.+-": {
 		"prefix": "@js_array.+-",
 		"body": [
+			"/* start js_array.+- */",
 			"/**",
 			" * 删",
 			" */",
@@ -143,26 +29,152 @@
 			"// 增第一个 - unshift",
 			"let a = [1, 2, 3];",
 			"a.unshift(4, 5);",
-			"// [4,5,1,2,3]"
+			"// [4,5,1,2,3]",
+			"/* end js_array.+- */"
 		],
 		"description": "增删"
+	},
+	"@js_array.concat": {
+		"prefix": "@js_array.concat",
+		"body": [
+			"/* start js_array.concat */",
+			"${ary1}.concat(${ary2})",
+			"/* end js_array.concat */"
+		],
+		"description": "数组合并"
+	},
+	"@js_array.every": {
+		"prefix": "@js_array.every",
+		"body": [
+			"/* start js_array.every */",
+			"// 检测数组所有元素是否大于10, 大于则passed = true",
+			"function isBigEnough(element, index, array) {",
+			"    return (element >= 10);",
+			"  }",
+			"var passed = [12, 5, 8, 130, 44].every(isBigEnough);",
+			"/* end js_array.every */"
+		],
+		"description": "检测数组中所有元素是否都大于x值"
+	},
+	"@js_array.filter": {
+		"prefix": "@js_array.filter",
+		"body": [
+			"/* start js_array.filter */",
+			"function isBigEnough(value) {",
+			"    return value >= 10;",
+			"}  ",
+			"var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);",
+			"// filtered is [12, 130, 44]",
+			"/* end js_array.filter */"
+		],
+		"description": "数组返回符合指定条件的元素组"
+	},
+	"@js_array.foreach": {
+		"prefix": "@js_array.foreach",
+		"body": [
+			"/* start js_array.foreach */",
+			"const arr = ['a', 'b', 'c'];",
+			"arr.forEach(function(element, index, array) {",
+			"    console.log(element, index, array);",
+			"});",
+			"/* end js_array.foreach */"
+		],
+		"description": "数据遍历"
+	},
+	"@js_array.from": {
+		"prefix": "@js_array.from",
+		"body": [
+			"/* start js_array.from */",
+			"// 类数组转化为数组，mapFn为回调函数",
+			"// Array.from(arrayLike, mapFn, thisArg)",
+			"",
+			"Array.from('foo');",
+			"// [\"f\", \"o\", \"o\"]",
+			"/* end js_array.from */"
+		],
+		"description": "类数组转为数组"
+	},
+	"@js_array.includes": {
+		"prefix": "@js_array.includes",
+		"body": [
+			"/* start js_array.includes */",
+			"${ary}.includes(2);",
+			"/* end js_array.includes */"
+		],
+		"description": "数组是否包含某元素"
+	},
+	"@js_array.indexOf": {
+		"prefix": "@js_array.indexOf",
+		"body": [
+			"/* start js_array.indexOf */",
+			"${ary}.indexOf(2);",
+			"/* end js_array.indexOf */"
+		],
+		"description": "数组指定元素的序列"
+	},
+	"@js_array.join": {
+		"prefix": "@js_array.join",
+		"body": [
+			"/* start js_array.join */",
+			"let a = ['Wind', 'Rain', 'Fire'];",
+			"",
+			"console.log(a.join()); ",
+			"// 默认为 \",\"",
+			"// 'Wind,Rain,Fire'",
+			"",
+			"console.log(a.join(\"\")); ",
+			"// 分隔符 === 空字符串 \"\"",
+			"// \"WindRainFire\"",
+			"",
+			"console.log(a.join(\"-\")); ",
+			"// 分隔符 \"-\"",
+			"// 'Wind-Rain-Fire'",
+			"/* end js_array.join */"
+		],
+		"description": "转为字符串"
+	},
+	"@js_array.map": {
+		"prefix": "@js_array.map",
+		"body": [
+			"/* start js_array.map */",
+			"let numbers = [1, 5, 10, 15];",
+			"let doubles = numbers.map( x => x ** 2);",
+			"// doubles is now [1, 25, 100, 225]",
+			"// numbers is still [1, 5, 10, 15]",
+			"/* end js_array.map */"
+		],
+		"description": "遍历返回新数组"
 	},
 	"@js_array.reduce": {
 		"prefix": "@js_array.reduce",
 		"body": [
+			"/* start js_array.reduce */",
 			"// reduce - 字面意思为减少数组元素",
 			"// arr.reduce(callback(accumulator,currentValue){}, [initialValue])",
 			"var total = [ 0, 1, 2, 3 ].reduce(",
 			"    ( acc, cur ) => acc + cur,",
 			"    5",
 			");",
-			"// 结果为 5初始值 + 0 + 1 + 2 + 3 = 11"
+			"// 结果为 5初始值 + 0 + 1 + 2 + 3 = 11",
+			"/* end js_array.reduce */"
 		],
 		"description": "累加器"
+	},
+	"@js_array.reverse": {
+		"prefix": "@js_array.reverse",
+		"body": [
+			"/* start js_array.reverse */",
+			"var myArray = ['one', 'two', 'three'];",
+			"myArray.reverse(); ",
+			"// ['three', 'two', 'one']",
+			"/* end js_array.reverse */"
+		],
+		"description": "翻转"
 	},
 	"@js_array.slice": {
 		"prefix": "@js_array.slice",
 		"body": [
+			"/* start js_array.slice */",
 			"// 浅拷贝：包含索引开始，不包含结束索引",
 			"arr.slice();",
 			"// [0, end]",
@@ -171,22 +183,15 @@
 			"// [begin, end]",
 			"",
 			"arr.slice(begin, end);",
-			"// [begin, end)"
+			"// [begin, end)",
+			"/* end js_array.slice */"
 		],
 		"description": "拷贝"
-	},
-	"@js_array.reverse": {
-		"prefix": "@js_array.reverse",
-		"body": [
-			"var myArray = ['one', 'two', 'three'];",
-			"myArray.reverse(); ",
-			"// ['three', 'two', 'one']"
-		],
-		"description": "翻转"
 	},
 	"@js_array.sortNum": {
 		"prefix": "@js_array.sortNum",
 		"body": [
+			"/* start js_array.sortNum */",
 			"/**",
 			" * 数字排序：arr.sort(compareFunction)",
 			" * 如果 compareFunction(a, b) 小于 0 ，那么 a 会被排列到 b 之前",
@@ -198,13 +203,15 @@
 			"numbers.sort((a, b) => a - b); ",
 			"",
 			"// 降序",
-			"numbers.sort((a, b) => b - a); "
+			"numbers.sort((a, b) => b - a); ",
+			"/* end js_array.sortNum */"
 		],
 		"description": "num排序"
 	},
 	"@js_array.sortObjKey": {
 		"prefix": "@js_array.sortObjKey",
 		"body": [
+			"/* start js_array.sortObjKey */",
 			"// 对象可以按照某个属性升序排列",
 			"",
 			"var items = [",
@@ -236,13 +243,15 @@
 			"  // names must be equal",
 			"  ",
 			"    return 0;",
-			"  });"
+			"  });",
+			"/* end js_array.sortObjKey */"
 		],
 		"description": "对象排序"
 	},
 	"@js_array.splice": {
 		"prefix": "@js_array.splice",
 		"body": [
+			"/* start js_array.splice */",
 			"/**",
 			" * 插入删除，语法：",
 			" * array.splice(start)",
@@ -254,53 +263,73 @@
 			"myFish.splice(2, 0, 'drum'); // 在索引为2的位置插入'drum'",
 			"// myFish 变为 [\"angel\", \"clown\", \"drum\", \"mandarin\", \"sturgeon\"]",
 			"myFish.splice(2, 1); // 从索引为2的位置删除一项（也就是'drum'这一项）",
-			"// myFish 变为 [\"angel\", \"clown\", \"mandarin\", \"sturgeon\"]"
+			"// myFish 变为 [\"angel\", \"clown\", \"mandarin\", \"sturgeon\"]",
+			"/* end js_array.splice */"
 		],
 		"description": "插入删除"
 	},
-	"@js_object.assign": {
-		"prefix": "@js_object.assign",
+	"@js_async": {
+		"prefix": "@js_async",
 		"body": [
-			"// 合并 & 复制属性",
-			"var o1 = { a: 1, b: 1, c: 1 };",
-			"var o2 = { b: 2, c: 2 };",
-			"var o3 = { c: 3 };",
-			"",
-			"var obj = Object.assign({}, o1, o2, o3);",
-			"// { a: 1, b: 2, c: 3 }"
+			"/* start js_async */",
+			"function resolveAfter2Seconds(x) {",
+			"    return new Promise(resolve => {",
+			"        setTimeout(() => {",
+			"        resolve(x);",
+			"        }, 2000);",
+			"    });",
+			"}",
+			"  ",
+			"async function ${1:add}(x) { ",
+			"    var a = await resolveAfter2Seconds(20); ",
+			"    var b = await resolveAfter2Seconds(30); ",
+			"    return x + a + b; ",
+			"}",
+			"   ",
+			"$1(10).then(v => { ",
+			"    console.log(v); // prints 60 after 4 seconds. ",
+			"});",
+			"/* end js_async */"
 		],
-		"description": "拷贝&覆盖属性"
+		"description": "async用法"
 	},
-	"@js_class_extends": {
-		"prefix": "@js_class_extends",
+	"@js_async_all": {
+		"prefix": "@js_async_all",
 		"body": [
-			"class ${1:Base} {",
-			"    constructor(x,y) {",
-			"        this.num = x;",
-			"        this.next = y;",
-			"    }",
-			"",
-			"    add() {",
-			"        console.log(this.num + this.next);",
-			"    }",
+			"/* start js_async_all */",
+			"// async 并发处理",
+			"var func = async () => {",
+			"  var ary = ['opt1', 'opt2', 'opt3'];",
+			"  var resAry = [];",
+			"  for(var i=0; i<ary.length; i++) {",
+			"    resAry[i] = await post_async(ary[i]);",
+			"  }",
+			"  console.log(resAry)",
 			"}",
-			"class ${2:Sub} extends $1 {",
-			"    constructor(x,y){",
-			"        super(x,y);",
-			"    }",
-			"    ",
-			"    addNum() {",
-			"        super.add()",
-			"        console.log('addNum');",
-			"    }",
-			"}",
-			"let ${3:demo} = new $2(2,3);"
+			"/* end js_async_all */"
 		],
-		"description": "继承示例"
+		"description": "async并发"
+	},
+	"@js_async_promise_all": {
+		"prefix": "@js_async_promise_all",
+		"body": [
+			"/* start js_async_promise_all */",
+			"// promise.all 处理并发异步请求",
+			"async function dbFuc(db) {",
+			"  let docs = [{}, {}, {}];",
+			"  let promises = docs.map((doc) => db.post(doc));",
+			"",
+			"  let results = await Promise.all(promises);",
+			"  console.log(results);",
+			"}",
+			"/* end js_async_promise_all */"
+		],
+		"description": "混合处理并发"
 	},
 	"@js_class": {
 		"prefix": "@js_class",
 		"body": [
+			"/* start js_class */",
 			"class ${1:Base} {",
 			"    constructor(x,y) {",
 			"        this.num = x;",
@@ -322,36 +351,44 @@
 			"${1:Base}.prototype.division = function(){",
 			"    console.log( this.num / this.next );",
 			"}",
-			"let ${2:demo} = new $1(1,2);"
+			"let ${2:demo} = new $1(1,2);",
+			"/* end js_class */"
 		],
 		"description": "class基本示例"
 	},
-	"@js_async": {
-		"prefix": "@js_async",
+	"@js_class_extends": {
+		"prefix": "@js_class_extends",
 		"body": [
-			"function resolveAfter2Seconds(x) {",
-			"    return new Promise(resolve => {",
-			"        setTimeout(() => {",
-			"        resolve(x);",
-			"        }, 2000);",
-			"    });",
+			"/* start js_class_extends */",
+			"class ${1:Base} {",
+			"    constructor(x,y) {",
+			"        this.num = x;",
+			"        this.next = y;",
+			"    }",
+			"",
+			"    add() {",
+			"        console.log(this.num + this.next);",
+			"    }",
 			"}",
-			"  ",
-			"async function ${1:add}(x) { ",
-			"    var a = await resolveAfter2Seconds(20); ",
-			"    var b = await resolveAfter2Seconds(30); ",
-			"    return x + a + b; ",
+			"class ${2:Sub} extends $1 {",
+			"    constructor(x,y){",
+			"        super(x,y);",
+			"    }",
+			"    ",
+			"    addNum() {",
+			"        super.add()",
+			"        console.log('addNum');",
+			"    }",
 			"}",
-			"   ",
-			"$1(10).then(v => { ",
-			"    console.log(v); // prints 60 after 4 seconds. ",
-			"});"
+			"let ${3:demo} = new $2(2,3);",
+			"/* end js_class_extends */"
 		],
-		"description": "async用法"
+		"description": "继承示例"
 	},
 	"@js_function.apply": {
 		"prefix": "@js_function.apply",
 		"body": [
+			"/* start js_function.apply */",
 			"// apply主要用途是实现this指向更改，从而在执行当前函数时，可以调用this下的方法或者属性",
 			"// fun.apply(thisArg[, argsArray])",
 			"function fruits() {} ",
@@ -367,13 +404,15 @@
 			"    color: \"yellow\"",
 			"}",
 			"apple.say.call(banana);     //My color is yellow",
-			"apple.say.apply(banana);    //My color is yellow"
+			"apple.say.apply(banana);    //My color is yellow",
+			"/* end js_function.apply */"
 		],
 		"description": "改变this,参数数组"
 	},
 	"@js_function.bind": {
 		"prefix": "@js_function.bind",
 		"body": [
+			"/* start js_function.bind */",
 			"// 语法",
 			"// fun.bind(thisArg[, arg1[, arg2[, ...]]])",
 			"myObj = {",
@@ -383,13 +422,15 @@
 			"            console.log(this.name)",
 			"        }.bind(this),1000) // 改变this为当前环境中的局部作用域myObj",
 			"    }",
-			"}"
+			"}",
+			"/* end js_function.bind */"
 		],
 		"description": "bind用法"
 	},
 	"@js_function.call": {
 		"prefix": "@js_function.call",
 		"body": [
+			"/* start js_function.call */",
 			"function Product(name, price) {",
 			"    this.name = name;",
 			"    this.price = price;",
@@ -400,13 +441,66 @@
 			"    this.category = 'food';",
 			"}",
 			"  ",
-			"// console.log(new Food('cheese', 5).name);"
+			"// console.log(new Food('cheese', 5).name);",
+			"/* end js_function.call */"
 		],
 		"description": "call用法，参数依次传入"
+	},
+	"@js_map": {
+		"prefix": "@js_map",
+		"body": [
+			"/* start js_map */",
+			"/**",
+			" * Map相对于Object：",
+			" * 1.key可以为任意值,如下例子，key可以为函数运行",
+			" * 2.遍历时，key依次展示",
+			" */",
+			"",
+			"var myMap = new Map();",
+			"myMap.set({}, \"zero\");",
+			"myMap.set(1, \"one\");",
+			"myMap.set(function(){console.log('this is key func')}, \"three\");",
+			"for (var [key, value] of myMap) {",
+			"    console.log(key + \" = \" + value);",
+			"    if(key instanceof Function) {",
+			"        key();",
+			"    }",
+			"}",
+			"/* end js_map */"
+		],
+		"description": "类Object对象"
+	},
+	"@js_map_foreach": {
+		"prefix": "@js_map_foreach",
+		"body": [
+			"/* start js_map_foreach */",
+			"map.forEach(function(value, key, mapObj) {",
+			"  console.log(value + '---' + key + '---' + mapObj);",
+			"  console.log(this); //this === window",
+			"});",
+			"/* end js_map_foreach */"
+		],
+		"description": "map数据遍历"
+	},
+	"@js_object.assign": {
+		"prefix": "@js_object.assign",
+		"body": [
+			"/* start js_object.assign */",
+			"// 合并 & 复制属性",
+			"var o1 = { a: 1, b: 1, c: 1 };",
+			"var o2 = { b: 2, c: 2 };",
+			"var o3 = { c: 3 };",
+			"",
+			"var obj = Object.assign({}, o1, o2, o3);",
+			"// { a: 1, b: 2, c: 3 }",
+			"/* end js_object.assign */"
+		],
+		"description": "拷贝&覆盖属性"
 	},
 	"@js_object.defineProperties": {
 		"prefix": "@js_object.defineProperties",
 		"body": [
+			"/* start js_object.defineProperties */",
 			"var obj = {a: 1};",
 			"Object.defineProperties(obj, {",
 			"    'prop1': {",
@@ -429,13 +523,15 @@
 			"        configurable : true, //true 当且仅当该属性描述符的类型可以被改变并且该属性可以从对应对象中删除,默认是false",
 			"    }",
 			"  // etc. etc.",
-			"});"
+			"});",
+			"/* end js_object.defineProperties */"
 		],
 		"description": "定义属性"
 	},
 	"@js_object.defineProperty": {
 		"prefix": "@js_object.defineProperty",
 		"body": [
+			"/* start js_object.defineProperty */",
 			"// 基本demo",
 			"var o = {};",
 			"o.a = 1;",
@@ -471,146 +567,239 @@
 			"arc.temperature; // 'get!'",
 			"arc.temperature = 11;",
 			"arc.temperature = 13;",
-			"arc.getArchive(); // [{ val: 11 }, { val: 13 }]"
+			"arc.getArchive(); // [{ val: 11 }, { val: 13 }]",
+			"/* end js_object.defineProperty */"
 		],
 		"description": "单一属性"
 	},
 	"@js_object.freeze": {
 		"prefix": "@js_object.freeze",
 		"body": [
+			"/* start js_object.freeze */",
 			"// 冻结对象不能修改",
 			"let a=[0];",
-			"Object.freeze(a);"
+			"Object.freeze(a);",
+			"/* end js_object.freeze */"
 		],
 		"description": "冻结对象不能修改"
+	},
+	"@js_object.hasOwnProperty": {
+		"prefix": "@js_object.hasOwnProperty",
+		"body": [
+			"/* start js_object.hasOwnProperty */",
+			"// obj属性判断",
+			"var obj = {name:'jack'};",
+			"obj.hasOwnProperty('name'); // --> true",
+			"obj.hasOwnProperty('toString'); // --> false",
+			"/* end js_object.hasOwnProperty */"
+		],
+		"description": "对象是否有某属性"
 	},
 	"@js_object.is": {
 		"prefix": "@js_object.is",
 		"body": [
+			"/* start js_object.is */",
 			"Object.is('foo', 'foo');     // true",
-			"Object.is(null, null);       // true"
+			"Object.is(null, null);       // true",
+			"/* end js_object.is */"
 		],
 		"description": "判断值是否相同"
 	},
 	"@js_object.keys": {
 		"prefix": "@js_object.keys",
 		"body": [
+			"/* start js_object.keys */",
 			"// 支持array & obj",
 			"",
 			"let obj = { foo: \"bar\", baz: 42 };",
 			"let keys = Object.keys(obj);",
 			"",
 			"let arr = [\"a\", \"b\", \"c\"];",
-			"let arrKeys = Object.keys(arr); "
+			"let arrKeys = Object.keys(arr); ",
+			"/* end js_object.keys */"
 		],
 		"description": "枚举：数组 & 对象"
 	},
 	"@js_object.values": {
 		"prefix": "@js_object.values",
 		"body": [
+			"/* start js_object.values */",
 			"var obj = { foo: \"bar\", baz: 42 };",
-			"console.log(Object.values(obj)); // ['bar', 42]"
+			"console.log(Object.values(obj)); // ['bar', 42]",
+			"/* end js_object.values */"
 		],
 		"description": "返回数组：可枚举对象的values"
+	},
+	"js_object_string": {
+		"prefix": "js_object_string",
+		"body": [
+			"/* start s_object_string */",
+			"const test = {a: 123};",
+			"const str = JSON.stringify(test);",
+			"/* end s_object_string */"
+		],
+		"description": "obj转为string"
+	},
+	"@js_promise": {
+		"prefix": "@js_promise",
+		"body": [
+			"/* start js_promise */",
+			"var ${name} = new Promise((resolve,reject)=>{",
+			"    if (condition) {",
+			"        resolve(val);",
+			"    } else {",
+			"        reject(err);",
+			"    }",
+			"})",
+			"${name}",
+			"  .then(step2)",
+			"  .then(step3)",
+			"  .catch((err)=>{console.log(err)})",
+			"/* end js_promise */"
+		],
+		"description": "pros"
 	},
 	"@js_string.charAt": {
 		"prefix": "@js_string.charAt",
 		"body": [
+			"/* start js_string.charAt */",
 			"// charAt() 方法从一个字符串中返回指定的字符。",
 			"// str.charAt(index)",
-			"'thisIsaString'.charAt(0)"
+			"'thisIsaString'.charAt(0)",
+			"/* end js_string.charAt */"
 		],
 		"description": "字符串指定索引内容"
 	},
 	"@js_string.concat": {
 		"prefix": "@js_string.concat",
 		"body": [
-			"${1:str1}.concat(${2:str2},${3:str3})"
+			"/* start js_string.concat */",
+			"${1:str1}.concat(${2:str2},${3:str3})",
+			"/* end js_string.concat */"
 		],
 		"description": "合并字符串"
 	},
 	"@js_string.endsWith": {
 		"prefix": "@js_string.endsWith",
 		"body": [
+			"/* start js_string.endsWith */",
 			"// str是否已xx结尾",
 			"var str = \"To be, or not to be, that is the question.\";",
 			"str.endsWith(\"question.\") // true",
-			"str.endsWith(\"to be\") // false"
+			"str.endsWith(\"to be\") // false",
+			"/* end js_string.endsWith */"
 		],
 		"description": "boolen:是否以某字符串结尾"
 	},
 	"@js_string.includes": {
 		"prefix": "@js_string.includes",
 		"body": [
-			"'${1:To be, or not to be}'.includes('${2:To be}');"
+			"/* start js_string.includes */",
+			"'${1:To be, or not to be}'.includes('${2:To be}');",
+			"/* end js_string.includes */"
 		],
 		"description": "boolen:是否包含字符"
+	},
+	"@js_string.low&up": {
+		"prefix": "@js_string.low&up",
+		"body": [
+			"/* start js_string.low&up */",
+			"'ABFDfdfdsf'.toLowerCase();",
+			"\"alphabet\".toUpperCase();",
+			"/* end js_string.low&up */"
+		],
+		"description": "大小写"
 	},
 	"@js_string.match": {
 		"prefix": "@js_string.match",
 		"body": [
+			"/* start js_string.match */",
 			"var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';",
 			"var regexp = /[A-E]/gi;",
 			"var matches_array = str.match(regexp);",
 			"",
 			"console.log(matches_array);",
-			"// ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']"
+			"// ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']",
+			"/* end js_string.match */"
 		],
 		"description": "ary:匹配结果"
 	},
 	"@js_string.padEnd": {
 		"prefix": "@js_string.padEnd",
 		"body": [
+			"/* start js_string.padEnd */",
 			"// str.padEnd(targetLength [, padString])",
 			"// targetLength:当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。",
 			"'abc'.padEnd(10);          // \"abc       \"",
 			"'abc'.padEnd(10, \"foo\");   // \"abcfoofoof\"",
-			"'abc'.padEnd(1);           // \"abc\""
+			"'abc'.padEnd(1);           // \"abc\"",
+			"/* end js_string.padEnd */"
 		],
 		"description": "尾填充"
 	},
 	"@js_string.padStart": {
 		"prefix": "@js_string.padStart",
 		"body": [
+			"/* start js_string.padStart */",
 			"'abc'.padStart(10);         // \"       abc\"",
 			"'abc'.padStart(10, \"foo\");  // \"foofoofabc\"",
-			"'abc'.padStart(6,\"123465\"); // \"123abc\""
+			"'abc'.padStart(6,\"123465\"); // \"123abc\"",
+			"/* end js_string.padStart */"
 		],
 		"description": "头填充"
+	},
+	"@js_string.replace.reg": {
+		"prefix": "@js_string.replace.reg",
+		"body": [
+			"/* start js_string.replace.reg */",
+			"var re = /(\\w+)\\s(\\w+)/;",
+			"var str = 'John Smith';",
+			"var newstr = str.replace(re, '$2, $1');",
+			"console.log(newstr);  // Smith, John",
+			"/* end js_string.replace.reg */"
+		],
+		"description": "正则替换"
 	},
 	"@js_string.replace": {
 		"prefix": "@js_string.replace",
 		"body": [
+			"/* start js_string.replace */",
 			"var re = /apples/gi;",
 			"var str = \"Apples are round, and apples are juicy.\";",
-			"var newstr = str.replace(re, \"oranges\");"
+			"var newstr = str.replace(re, \"oranges\");",
+			"/* end js_string.replace */"
 		],
 		"description": "替换"
 	},
 	"@js_string.slice": {
 		"prefix": "@js_string.slice",
 		"body": [
+			"/* start js_string.slice */",
 			"// str.slice(beginSlice[, endSlice])",
 			"// slice() 方法提取一个字符串的一部分，并返回一新的字符串。",
 			"// 例1：str.slice(1, 4) 提取新字符串从第二个字符到第四个 (字符索引值为 1, 2, 和 3)。",
 			"// 例2：str.slice(2, -1) 提取第三个字符到倒数第二个字符。",
 			"var str1 = 'The morning is upon us.';",
 			"var str2 = str1.slice(4, -2);",
-			"console.log(str2); // OUTPUT: morning is upon u"
+			"console.log(str2); // OUTPUT: morning is upon u",
+			"/* end js_string.slice */"
 		],
 		"description": "截取字符串"
 	},
 	"@js_string.split": {
 		"prefix": "@js_string.split",
 		"body": [
+			"/* start js_string.split */",
 			"\"Webkit Moz O ms Khtml\".split( \" \" ); ",
-			"// [\"Webkit\", \"Moz\", \"O\", \"ms\", \"Khtml\"]"
+			"// [\"Webkit\", \"Moz\", \"O\", \"ms\", \"Khtml\"]",
+			"/* end js_string.split */"
 		],
 		"description": "分割成数组"
 	},
 	"@js_string.substr": {
 		"prefix": "@js_string.substr",
 		"body": [
+			"/* start js_string.substr */",
 			"/**",
 			" * substr() 方法返回一个字符串中从指定位置开始到指定字符数的字符。",
 			" * str.substr(start[, length])",
@@ -621,13 +810,15 @@
 			" */",
 			"var str = \"abcdefghij\";",
 			"str.substr(1,2) //bc",
-			"str.substr(1,3) //bcd"
+			"str.substr(1,3) //bcd",
+			"/* end js_string.substr */"
 		],
 		"description": "返回指定长度字符串"
 	},
 	"@js_string.substring": {
 		"prefix": "@js_string.substring",
 		"body": [
+			"/* start js_string.substring */",
 			"/**",
 			" * substring() 方法返回一个字符串在开始索引到结束索引之间的一个子集",
 			" * str.substring(indexStart[, indexEnd])",
@@ -635,124 +826,37 @@
 			" */",
 			"var anyString = \"Mozilla\";",
 			"anyString.substring(0,3)",
-			"// Moz"
+			"// Moz",
+			"/* end js_string.substring */"
 		],
 		"description": "索引范围内字符串"
-	},
-	"@js_string.low&up": {
-		"prefix": "@js_string.low&up",
-		"body": [
-			"'ABFDfdfdsf'.toLowerCase();",
-			"\"alphabet\".toUpperCase();"
-		],
-		"description": "大小写"
 	},
 	"@js_string.trim": {
 		"prefix": "@js_string.trim",
 		"body": [
+			"/* start js_string.trim */",
 			"var orig = '   foo  ';",
-			"console.log(orig.trim());"
+			"console.log(orig.trim());",
+			"/* end js_string.trim */"
 		],
 		"description": "去除空格"
 	},
-	"@js_array.from": {
-		"prefix": "@js_array.from",
+	"@js_switch": {
+		"prefix": "@js_switch",
 		"body": [
-			"// 类数组转化为数组，mapFn为回调函数",
-			"// Array.from(arrayLike, mapFn, thisArg)",
-			"",
-			"Array.from('foo');",
-			"// [\"f\", \"o\", \"o\"]"
+			"/* start js_switch */",
+			"switch(n) {",
+			"    case 1:",
+			"        // code content",
+			"        break;",
+			"    case 2:",
+			"        // code content",
+			"        break;",
+			"    default:",
+			"        // last code",
+			"}",
+			"/* end js_switch */"
 		],
-		"description": "类数组转为数组"
-	},
-	"@js_map": {
-		"prefix": "@js_map",
-		"body": [
-			"/**",
-			" * Map相对于Object：",
-			" * 1.key可以为任意值,如下例子，key可以为函数运行",
-			" * 2.遍历时，key依次展示",
-			" */",
-			"",
-			"var myMap = new Map();",
-			"myMap.set({}, \"zero\");",
-			"myMap.set(1, \"one\");",
-			"myMap.set(function(){console.log('this is key func')}, \"three\");",
-			"for (var [key, value] of myMap) {",
-			"    console.log(key + \" = \" + value);",
-			"    if(key instanceof Function) {",
-			"        key();",
-			"    }",
-			"}"
-		],
-		"description": "类Object对象"
-	},
-	"@js_async_all": {
-		"prefix": "@js_async_all",
-		"body": [
-			"// async 并发处理",
-			"var func = async () => {",
-			"  var ary = ['opt1', 'opt2', 'opt3'];",
-			"  var resAry = [];",
-			"  for(var i=0; i<ary.length; i++) {",
-			"    resAry[i] = await post_async(ary[i]);",
-			"  }",
-			"  console.log(resAry)",
-			"}"
-		],
-		"description": "async并发"
-	},
-	"@js_async_promise_all": {
-		"prefix": "@js_async_promise_all",
-		"body": [
-			"// promise.all 处理并发异步请求",
-			"async function dbFuc(db) {",
-			"  let docs = [{}, {}, {}];",
-			"  let promises = docs.map((doc) => db.post(doc));",
-			"",
-			"  let results = await Promise.all(promises);",
-			"  console.log(results);",
-			"}"
-		],
-		"description": "混合处理并发"
-	},
-	"@js_map_foreach": {
-		"prefix": "@js_map_foreach",
-		"body": [
-			"map.forEach(function(value, key, mapObj) {",
-			"  console.log(value + '---' + key + '---' + mapObj);",
-			"  console.log(this); //this === window",
-			"});"
-		],
-		"description": "map数据遍历"
-	},
-	"@js_object.hasOwnProperty": {
-		"prefix": "@js_object.hasOwnProperty",
-		"body": [
-			"// obj属性判断",
-			"var obj = {name:'jack'};",
-			"obj.hasOwnProperty('name'); // --> true",
-			"obj.hasOwnProperty('toString'); // --> false"
-		],
-		"description": "对象是否有某属性"
-	},
-	"@js_string.replace.reg": {
-		"prefix": "@js_string.replace.reg",
-		"body": [
-			"var re = /(\\w+)\\s(\\w+)/;",
-			"var str = 'John Smith';",
-			"var newstr = str.replace(re, '$2, $1');",
-			"console.log(newstr);  // Smith, John"
-		],
-		"description": "正则替换"
-	},
-	"@js_object_string": {
-		"prefix": "js_object_string",
-		"body": [
-			"const test = {a: 123};",
-			"const str = JSON.stringify(test);"
-		],
-		"description": "obj转为string"
+		"description": "switch"
 	}
 }

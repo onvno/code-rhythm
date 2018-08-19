@@ -1,0 +1,9 @@
+-
+    prefix: '@utils_base64'
+    body: |-
+        //  string covert to base64
+        window.btoa(string)
+
+        //  base64 convert to string
+        window.atob(string)
+    description: base64转换

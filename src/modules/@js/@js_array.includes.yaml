@@ -1,0 +1,4 @@
+-
+    prefix: '@js_array.includes'
+    body: '${ary}.includes(2);'
+    description: 数组是否包含某元素

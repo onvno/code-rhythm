@@ -1,0 +1,9 @@
+-
+    prefix: '@moment_convert'
+    body: |-
+        // 转换为moment
+        moment.locale('zh-cn');
+        moment("12-25-1995", "MM-DD-YYYY")
+        moment().subtract(1, 'days'); // 前一天
+        moment().add(1, 'days'); // 后一天
+    description: 转为moment

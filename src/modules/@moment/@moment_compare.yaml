@@ -1,0 +1,12 @@
+-
+    prefix: '@moment_compare'
+    body: |-
+        /**
+         * 时间比较
+         * moment().isBefore(Moment|String|Number|Date|Array);
+         * moment().isSame(Moment|String|Number|Date|Array);
+         * moment().isAfter(Moment|String|Number|Date|Array);
+         */
+        moment('2010-10-20').isBefore('2011-10-20')
+        moment().isBefore(moment().subtract(90, 'days'))
+    description: 日期比较

@@ -1,0 +1,7 @@
+-
+    prefix: '@reg_id'
+    body: |-
+        //验证身份证号码
+        var re = /(^\d{15}$)|(^\d{17}([0-9]|X|x)$)/
+        re.test('1dfdsklfjdsklfjs')
+    description: 身份证

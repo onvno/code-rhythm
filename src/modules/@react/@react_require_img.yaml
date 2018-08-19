@@ -1,0 +1,6 @@
+-
+    prefix: '@react_require_img'
+    body: |-
+        // require img
+        <img src={require('./xxx.png')} />
+    description: requrie图片

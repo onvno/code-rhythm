@@ -1,0 +1,7 @@
+-
+    prefix: '@element_checkbox'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/checkbox -->
+        <el-checkbox v-model="checked">多选框</el-checkbox>
+        <el-checkbox v-model="checked2" disabled>禁用多选框</el-checkbox>
+    description: 多选框

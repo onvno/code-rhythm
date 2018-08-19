@@ -1,0 +1,6 @@
+-
+    prefix: '@js_string.trim'
+    body: |-
+        var orig = '   foo  ';
+        console.log(orig.trim());
+    description: 去除空格

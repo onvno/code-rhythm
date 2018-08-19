@@ -1,0 +1,11 @@
+-
+    prefix: '@js_array.reduce'
+    body: |-
+        // reduce - 字面意思为减少数组元素
+        // arr.reduce(callback(accumulator,currentValue){}, [initialValue])
+        var total = [ 0, 1, 2, 3 ].reduce(
+            ( acc, cur ) => acc + cur,
+            5
+        );
+        // 结果为 5初始值 + 0 + 1 + 2 + 3 = 11
+    description: 累加器

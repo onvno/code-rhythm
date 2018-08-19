@@ -1,0 +1,14 @@
+-
+    prefix: '@axios_post_base'
+    body: |-
+        axios.post('/user', {
+            firstName: 'Fred',
+            lastName: 'Flintstone'
+          })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+    description: 基本post

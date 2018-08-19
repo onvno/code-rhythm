@@ -1,0 +1,12 @@
+-
+    prefix: '@js_string.substring'
+    body: |-
+        /**
+         * substring() 方法返回一个字符串在开始索引到结束索引之间的一个子集
+         * str.substring(indexStart[, indexEnd])
+         * 输出结果不包含indexEnd位置的字符
+         */
+        var anyString = "Mozilla";
+        anyString.substring(0,3)
+        // Moz
+    description: 索引范围内字符串

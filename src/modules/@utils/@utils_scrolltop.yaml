@@ -1,0 +1,12 @@
+-
+    prefix: '@utils_scrolltop'
+    body: |-
+        /**
+         * 无动画
+         * @desc 设置滚动条距顶部的距离
+         */
+        function setScrollTop(value) {
+            window.scrollTo(0, value);
+            return value;
+        }
+    description: 返回顶部无动画

@@ -1,0 +1,25 @@
+-
+    prefix: '@js_class_extends'
+    body: |-
+        class ${1:Base} {
+            constructor(x,y) {
+                this.num = x;
+                this.next = y;
+            }
+
+            add() {
+                console.log(this.num + this.next);
+            }
+        }
+        class ${2:Sub} extends $1 {
+            constructor(x,y){
+                super(x,y);
+            }
+            
+            addNum() {
+                super.add()
+                console.log('addNum');
+            }
+        }
+        let ${3:demo} = new $2(2,3);
+    description: 继承示例

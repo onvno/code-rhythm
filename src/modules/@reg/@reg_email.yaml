@@ -1,0 +1,7 @@
+-
+    prefix: '@reg_email'
+    body: |-
+        //验证邮箱
+        var re = /^\w+@([0-9a-zA-Z]+[.])+[a-z]{2,4}$/
+        re.test('leewei2020@gmail.com')
+    description: email验证

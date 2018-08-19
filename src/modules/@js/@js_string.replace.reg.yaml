@@ -1,0 +1,8 @@
+-
+    prefix: '@js_string.replace.reg'
+    body: |-
+        var re = /(\w+)\s(\w+)/;
+        var str = 'John Smith';
+        var newstr = str.replace(re, '$2, $1');
+        console.log(newstr);  // Smith, John
+    description: 正则替换

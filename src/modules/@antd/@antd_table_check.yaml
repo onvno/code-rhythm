@@ -1,0 +1,82 @@
+-
+    prefix: '@antd_table_check'
+    body: |-
+        import React, {Component} from 'react';
+        import {Button, Table} from 'antd';
+        import { withRouter } from "react-router-dom";
+
+        class CheckTable extends Component {
+          constructor(props) {
+              super(props);
+          }
+          columnsConfig = () => {
+            return [
+              {
+                title: "序号",
+                dataIndex: "index",
+                key: "index",
+                width: 60,
+                render: (text, record, index) => {
+                  return index + 1;
+                }
+              },
+              {
+                title: "分组名",
+                dataIndex: "name",
+                key: "name",
+                width: "20%",
+                render: text => text
+              },
+              {
+                title: "配置时间",
+                dataIndex: "time",
+                key: "time",
+                width: "20%",
+                render: text => text
+              }
+            ];
+          };
+          renderDataContent = () => {
+            const dataList = [{
+              name: 'pre',
+              time: '2018-02-05  15:28:03 '
+            }, {
+              name: 'han',
+              time: '2018-02-05  15:28:03 ',
+            }, {
+              name: 'hna-text',
+              time: '2018-02-05  15:28:03 ',
+            }]
+            
+            let tableParams = {
+              pagination: false,
+              dataSource: dataList,
+              columns: this.columnsConfig(),
+              rowKey: (record, index) => {
+                return index;
+              },
+              rowSelection: {
+                columnWidth: 60,
+                onChange: (selectedRowKeys, selectedRows) => {
+                  console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+                },
+                getCheckboxProps: record => ({
+                  // disabled: record.name === 'hna-text', // Column configuration not to be checked
+                  // checked: record.name === 'hna-text',
+                }),
+              }
+            };
+            return (
+              <Table {...tableParams} />
+            )
+          }
+          render() {
+            return (
+              <div>
+                {this.renderDataContent()}
+              </div>
+            );
+          }
+        }
+        export default withRouter(CheckTable);
+    description: 勾选框table

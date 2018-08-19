@@ -1,0 +1,43 @@
+-
+    prefix: '@utils_pattern_proxy'
+    body: |-
+        // 代理模式：主要用于缓存结果，用于项目优化。
+        // 使用场景：缓存结果避免多次请求，合并请求，图片懒加载
+        // define
+        const mult = function() {
+            let a = 1;
+            for(let i=0; i<arguments.length; i++) {
+                a *= arguments[i];
+            }
+            return a;
+        };
+
+        const plus = function() {
+            let a = 0;
+            for(let i=0; i<arguments.length; i++) {
+                a += arguments[i];
+            }
+            return a;
+        }
+
+        const createProxyFactory = function(fn) {
+            let cache = {};
+            return function() {
+                let args = Array.from(arguments).join(',');
+                if (args in cache) {
+                    console.log('缓存内容已存在');
+                    return cache[args];
+                } else {
+                    console.log('第一次执行');
+                    return cache[args] = fn.apply(this, arguments);
+                }
+            };
+        }
+
+        // use
+        const proxyMult = createProxyFactory(mult);
+        const proxyPlus = createProxyFactory(plus);
+        console.log(proxyMult(1,2,3,4)); // 24
+        console.log(proxyPlus(1,2,3,4)); // 10
+        console.log(proxyMult(1,2,3,4)); // 缓存内容已存在 24
+    description: 代理(缓存)模式.用于优化

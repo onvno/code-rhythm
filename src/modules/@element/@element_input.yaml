@@ -1,0 +1,13 @@
+-
+    prefix: '@element_input'
+    body: >-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/input -->
+
+        <el-input v-model="input" placeholder="普通输入框"></el-input>
+
+        <el-input v-model="input"
+        placeholder="禁用输入框":disabled="true"></el-input>
+
+        <el-input v-model="input" placeholder="可清除输入框":disabled="true"
+        clearable></el-input>
+    description: 输入框

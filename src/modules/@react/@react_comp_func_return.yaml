@@ -1,0 +1,12 @@
+-
+    prefix: '@react_comp_func_return'
+    body: |-
+        import React from 'react';
+
+        const ${1:BaseComp} = () => {
+            return (
+                <div>${2:Content}</div>
+            )
+        }
+        export default $1;
+    description: 无状态带return

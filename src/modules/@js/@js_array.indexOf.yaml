@@ -1,0 +1,4 @@
+-
+    prefix: '@js_array.indexOf'
+    body: '${ary}.indexOf(2);'
+    description: 数组指定元素的序列

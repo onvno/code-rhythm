@@ -1,0 +1,20 @@
+-
+    prefix: '@js_function.apply'
+    body: |-
+        // apply主要用途是实现this指向更改，从而在执行当前函数时，可以调用this下的方法或者属性
+        // fun.apply(thisArg[, argsArray])
+        function fruits() {} 
+        fruits.prototype = {
+            color: "red",
+            say: function() {
+                console.log("My color is " + this.color);
+            }
+        }
+         
+        var apple = new fruits;
+        var banana = {
+            color: "yellow"
+        }
+        apple.say.call(banana);     //My color is yellow
+        apple.say.apply(banana);    //My color is yellow
+    description: '改变this,参数数组'

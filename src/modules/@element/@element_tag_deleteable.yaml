@@ -1,0 +1,10 @@
+-
+    prefix: '@element_tag_deleteable'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/tag -->
+        <el-tag>标签一</el-tag>
+        <el-tag type="success" closable>success</el-tag>
+        <el-tag type="info" closable>info</el-tag>
+        <el-tag type="warning" closable>warning</el-tag>
+        <el-tag type="danger" closable>danger</el-tag>
+    description: 可删除标签

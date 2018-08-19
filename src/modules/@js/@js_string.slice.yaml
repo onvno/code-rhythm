@@ -1,0 +1,11 @@
+-
+    prefix: '@js_string.slice'
+    body: |-
+        // str.slice(beginSlice[, endSlice])
+        // slice() 方法提取一个字符串的一部分，并返回一新的字符串。
+        // 例1：str.slice(1, 4) 提取新字符串从第二个字符到第四个 (字符索引值为 1, 2, 和 3)。
+        // 例2：str.slice(2, -1) 提取第三个字符到倒数第二个字符。
+        var str1 = 'The morning is upon us.';
+        var str2 = str1.slice(4, -2);
+        console.log(str2); // OUTPUT: morning is upon u
+    description: 截取字符串

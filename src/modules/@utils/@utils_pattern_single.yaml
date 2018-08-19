@@ -1,0 +1,14 @@
+-
+    prefix: '@utils_pattern_single'
+    body: |-
+        var Singleton = {
+            name: 'test',
+            method: function() {
+                console.log(this.name)
+            },
+            init: function() {
+                this.method();
+            }
+        }
+        Singleton.init();
+    description: 单体模式

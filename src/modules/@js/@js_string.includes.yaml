@@ -1,0 +1,4 @@
+-
+    prefix: '@js_string.includes'
+    body: '''${1:To be, or not to be}''.includes(''${2:To be}'');'
+    description: 'boolen:是否包含字符'

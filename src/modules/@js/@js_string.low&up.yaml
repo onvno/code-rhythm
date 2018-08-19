@@ -1,0 +1,6 @@
+-
+    prefix: '@js_string.low&up'
+    body: |-
+        'ABFDfdfdsf'.toLowerCase();
+        "alphabet".toUpperCase();
+    description: 大小写

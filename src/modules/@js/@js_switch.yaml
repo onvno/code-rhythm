@@ -1,0 +1,14 @@
+-
+    prefix: '@js_switch'
+    body: |-
+        switch(n) {
+            case 1:
+                // code content
+                break;
+            case 2:
+                // code content
+                break;
+            default:
+                // last code
+        }
+    description: switch

@@ -1,0 +1,10 @@
+-
+    prefix: '@react_img'
+    body: |-
+        // import
+        import xxx from './xxx.png'
+        <img src={xxx} />
+
+        // require
+        <img src={require('./xxx.png')} />
+    description: 插入图片

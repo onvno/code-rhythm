@@ -1,0 +1,6 @@
+-
+    prefix: '@js_string.split'
+    body: |-
+        "Webkit Moz O ms Khtml".split( " " ); 
+        // ["Webkit", "Moz", "O", "ms", "Khtml"]
+    description: 分割成数组

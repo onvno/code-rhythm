@@ -1,0 +1,11 @@
+-
+    prefix: '@utils_json_pretty_tab'
+    body: |-
+        var ${1:Obj} = ${2:{ foo: "sample", bar: "sample" }};
+        var ObjStr = JSON.stringify($1, null, 4)
+        // output
+        // {
+        //   "foo": "sample", 
+        //   "bar": "sample" 
+        // }
+    description: json美化形式

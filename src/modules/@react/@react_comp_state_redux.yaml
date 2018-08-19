@@ -1,0 +1,53 @@
+-
+    prefix: '@react_comp_state_redux'
+    body: |-
+        import React, {Component} from 'react';
+        import PropTypes from 'prop-types';
+        import {bindActionCreators} from 'redux';
+        import {connect} from 'react-redux';
+        import Counter from 'root/components/Counter';
+        import * as countAction from 'path/action.js';
+
+        class Home extends Component {
+            static propTypes = {
+                count: PropTypes.number.isRequired,
+                actions: PropTypes.object.isRequired
+            };
+
+            state = {
+                showName: 'loading user'
+            };
+
+            getUser = (url) => {
+                // do something
+            };
+
+            componentDidMount() {
+                const url = '/api/getUser';
+                this.getUser(url);
+            }
+
+            render() {
+                const {props, state} = this;
+                return (
+                    <div>
+                        <p>USER: {state.showName}</p>
+                        <Counter
+                            count={props.count}
+                            increCount={props.actions.increment}
+                            decreCount={props.actions.decrement}
+                        />
+                    </div>
+                );
+            }
+        }
+        const mapStateToProps = (state) => ({count: state.countState.count});
+        const mapDisPatchToProps = (dispatch) => ({
+            actions: bindActionCreators(countAction, dispatch)
+        });
+
+        export default connect(
+            mapStateToProps,
+            mapDisPatchToProps
+        )(Home);
+    description: state组件with redux

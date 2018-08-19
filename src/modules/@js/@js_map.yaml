@@ -1,0 +1,20 @@
+-
+    prefix: '@js_map'
+    body: |-
+        /**
+         * Map相对于Object：
+         * 1.key可以为任意值,如下例子，key可以为函数运行
+         * 2.遍历时，key依次展示
+         */
+
+        var myMap = new Map();
+        myMap.set({}, "zero");
+        myMap.set(1, "one");
+        myMap.set(function(){console.log('this is key func')}, "three");
+        for (var [key, value] of myMap) {
+            console.log(key + " = " + value);
+            if(key instanceof Function) {
+                key();
+            }
+        }
+    description: 类Object对象

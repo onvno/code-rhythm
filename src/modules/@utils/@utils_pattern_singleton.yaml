@@ -1,0 +1,27 @@
+-
+    prefix: '@utils_pattern_singleton'
+    body: |-
+        // 单例模式：避免一个对象多次创建,与new构建正好相反
+
+        // 定义
+        Singleton = (function(){
+            var instance;
+            function createInstance() {
+                var object = new Object("I am the instance");
+                return object;
+            }
+            return {
+                getInstance: function() {
+                    if(!instance) {
+                        instance = createInstance();
+                    }
+                    return instance;
+                }
+            }
+        })();
+
+        // 使用
+        var instance1 = Singleton.getInstance();
+        var instance2 = Singleton.getInstance();
+        console.log("Same instance? " + (instance1 === instance2)); // true
+    description: 单例模式

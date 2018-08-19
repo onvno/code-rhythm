@@ -1,0 +1,13 @@
+-
+    prefix: '@utils_pattern_adapter'
+    body: |-
+        // adapter:适配器模式常用作：将一个类的接口转换成客户希望的另外一个接口
+        // 适配器模式的作用很像一个转接口. 本来iphone的充电器是不能直接插在电脑机箱上的, 而通过一个usb转接口就可以了
+        // yon的开发其实就是这样：使用yon install命令，但实质是调用npm install进行相关操作
+        // 所以我们可以称呼适配器为转接头模式
+
+        var $ = function( tag ){
+            return document.getElementsByTagName(tag);
+        }
+        // 实现$(tag)，其实调用的是getElementsByTagName(tag);
+    description: 交换头（适配器）模式

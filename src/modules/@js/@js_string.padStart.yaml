@@ -1,0 +1,7 @@
+-
+    prefix: '@js_string.padStart'
+    body: |-
+        'abc'.padStart(10);         // "       abc"
+        'abc'.padStart(10, "foo");  // "foofoofabc"
+        'abc'.padStart(6,"123465"); // "123abc"
+    description: 头填充

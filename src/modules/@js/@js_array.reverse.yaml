@@ -1,0 +1,7 @@
+-
+    prefix: '@js_array.reverse'
+    body: |-
+        var myArray = ['one', 'two', 'three'];
+        myArray.reverse(); 
+        // ['three', 'two', 'one']
+    description: 翻转

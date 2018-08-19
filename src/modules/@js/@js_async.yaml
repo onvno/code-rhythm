@@ -1,0 +1,21 @@
+-
+    prefix: '@js_async'
+    body: |-
+        function resolveAfter2Seconds(x) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                resolve(x);
+                }, 2000);
+            });
+        }
+          
+        async function ${1:add}(x) { 
+            var a = await resolveAfter2Seconds(20); 
+            var b = await resolveAfter2Seconds(30); 
+            return x + a + b; 
+        }
+           
+        $1(10).then(v => { 
+            console.log(v); // prints 60 after 4 seconds. 
+        });
+    description: async用法

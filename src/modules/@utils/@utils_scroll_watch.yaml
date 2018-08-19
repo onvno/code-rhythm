@@ -1,0 +1,10 @@
+-
+    prefix: '@utils_scroll_watch'
+    body: >-
+        // 滚动监听
+
+        window.onscroll=function(){ getScrollTop(); } 
+
+        function getScrollTop() {
+        console.log(document.documentElement.scrollTop) }
+    description: 滚动监听

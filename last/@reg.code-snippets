@@ -1,0 +1,54 @@
+{
+	"@reg_email": {
+		"prefix": "@reg_email",
+		"body": [
+			"//验证邮箱",
+			"var re = /^\\w+@([0-9a-zA-Z]+[.])+[a-z]{2,4}$/",
+			"re.test('leewei2020@gmail.com')"
+		],
+		"description": "email验证"
+	},
+	"@reg_mobile": {
+		"prefix": "@reg_mobile",
+		"body": [
+			"//验证手机号",
+			"var re = /^1[3|5|8|7]\\d{9}$/;",
+			"console.log(re.test(18818818888))"
+		],
+		"description": "手机"
+	},
+	"@reg_id": {
+		"prefix": "@reg_id",
+		"body": [
+			"//验证身份证号码",
+			"var re = /(^\\d{15}$)|(^\\d{17}([0-9]|X|x)$)/",
+			"re.test('1dfdsklfjdsklfjs')"
+		],
+		"description": "身份证"
+	},
+	"@reg_chinese": {
+		"prefix": "@reg_chinese",
+		"body": [
+			"//匹配中文字符的正则表达式",
+			"var re = /[\\u4e00-\\u9fa5]/",
+			"re.test('中');"
+		],
+		"description": "中文"
+	},
+	"@reg_sentence": {
+		"prefix": "@reg_sentence",
+		"body": [
+			"//匹配字母、数字、中文字符",
+			"var re = /^([A-Za-z0-9]|[\\u4e00-\\u9fa5])*$/"
+		],
+		"description": "中英文及数字"
+	},
+	"@reg_url": {
+		"prefix": "@reg_url",
+		"body": [
+			"var re = /^http(s):\\/\\/.+\\./;",
+			"re.test('https://www.baidu.com')"
+		],
+		"description": "url"
+	}
+}

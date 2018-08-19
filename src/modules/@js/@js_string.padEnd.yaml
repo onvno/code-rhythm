@@ -1,0 +1,9 @@
+-
+    prefix: '@js_string.padEnd'
+    body: |-
+        // str.padEnd(targetLength [, padString])
+        // targetLength:当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。
+        'abc'.padEnd(10);          // "abc       "
+        'abc'.padEnd(10, "foo");   // "abcfoofoof"
+        'abc'.padEnd(1);           // "abc"
+    description: 尾填充

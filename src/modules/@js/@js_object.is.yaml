@@ -1,0 +1,6 @@
+-
+    prefix: '@js_object.is'
+    body: |-
+        Object.is('foo', 'foo');     // true
+        Object.is(null, null);       // true
+    description: 判断值是否相同

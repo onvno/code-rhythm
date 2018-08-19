@@ -1,0 +1,8 @@
+-
+    prefix: '@module_node_exports'
+    body: |-
+        var addX = function (value) {
+          return value + x;
+        };
+        module.exports = addX;
+    description: cmd导出默认模块

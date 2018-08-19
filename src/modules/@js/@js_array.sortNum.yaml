@@ -1,0 +1,16 @@
+-
+    prefix: '@js_array.sortNum'
+    body: |-
+        /**
+         * 数字排序：arr.sort(compareFunction)
+         * 如果 compareFunction(a, b) 小于 0 ，那么 a 会被排列到 b 之前
+         * 如果 compareFunction(a, b) 大于 0 ， b 会被排列到 a 之前
+         */
+
+        //  升序
+        var numbers = [4, 2, 5, 1, 3]; 
+        numbers.sort((a, b) => a - b); 
+
+        // 降序
+        numbers.sort((a, b) => b - a); 
+    description: num排序

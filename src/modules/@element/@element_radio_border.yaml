@@ -1,0 +1,6 @@
+-
+    prefix: '@element_radio_border'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/radio -->
+        <el-radio v-model="radio7" label="1" border>备选项1</el-radio>
+    description: 带边框单选框

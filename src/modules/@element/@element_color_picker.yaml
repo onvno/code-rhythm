@@ -1,0 +1,9 @@
+-
+    prefix: '@element_color_picker'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/color-picker -->
+        <!-- 带透明度 -->
+        <el-color-picker v-model="color3" show-alpha></el-color-picker>
+        <!-- 不带透明度 -->
+        <el-color-picker v-model="color3"></el-color-picker>
+    description: 颜色选择器

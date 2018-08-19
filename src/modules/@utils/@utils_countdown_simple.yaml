@@ -1,0 +1,14 @@
+-
+    prefix: '@utils_countdown_simple'
+    body: |-
+        (function() {
+            var time = 10;
+            var set = setInterval(function() {
+                time--;
+                console.log(time);
+                if(time === 0) {
+                    clearInterval(set);
+                }
+            }, 1000);
+        })()
+    description: 最简单倒计时

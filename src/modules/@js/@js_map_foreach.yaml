@@ -1,0 +1,8 @@
+-
+    prefix: '@js_map_foreach'
+    body: |-
+        map.forEach(function(value, key, mapObj) {
+          console.log(value + '---' + key + '---' + mapObj);
+          console.log(this); //this === window
+        });
+    description: map数据遍历

@@ -1,0 +1,6 @@
+-
+    prefix: '@reg_sentence'
+    body: |-
+        //匹配字母、数字、中文字符
+        var re = /^([A-Za-z0-9]|[\u4e00-\u9fa5])*$/
+    description: 中英文及数字

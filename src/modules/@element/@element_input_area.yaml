@@ -1,0 +1,17 @@
+-
+    prefix: '@element_input_area'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/input -->
+        <el-input
+          type="textarea"
+          :rows="2"
+          placeholder="配置型文本域"
+          v-model="textarea">
+        </el-input>
+        <el-input
+          type="textarea"
+          autosize
+          placeholder="自适应文本域"
+          v-model="textarea2">
+        </el-input>
+    description: 文本输入框

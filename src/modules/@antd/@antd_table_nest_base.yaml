@@ -1,0 +1,172 @@
+-
+    prefix: '@antd_table_nest_base'
+    body: |-
+        import React, {Component} from 'react';
+        import { Table, Badge, Menu, Dropdown, Icon } from 'antd';
+        import './index.less';
+
+        class NestedTable extends Component {
+          constructor(props){
+            super(props);
+          }
+          columnsNestedConfig = () => {
+            return [
+              {
+                title: "序号",
+                width: "15%",
+                key: "index",
+                render: (text, record, index) => {
+                  return index + 1;
+                }
+              },
+              {
+                title: "实例名",
+                dataIndex: "hostname",
+                key: "hostname",
+                width: "25%",
+                render: text => {
+                  return text;
+                }
+              },
+              {
+                title: "是否到达",
+                dataIndex: "success",
+                width: "25%",
+                key: "success",
+                render: text => {
+                  return text === 0 ? (
+                    <div>
+                      <span className="circle stop" />异常
+                    </div>
+                  ) : (
+                    <div>
+                      <span className="circle" />正常
+                    </div>
+                  );
+                }
+              },
+              {
+                title: "上报时间",
+                dataIndex: "upTime",
+                key: "upTime",
+                width: "30%",
+                render: text => {
+                  return text;
+                  // return CSTTransfer(text);
+                }
+              }
+            ];
+          };
+
+          renderNestedTable = () => {
+            const dataSource = [
+              {
+                hostname: 'cplat-uranus-api01.gz01',
+                success: '是',
+                upTime: '2018-02-05  15:28:03 ',
+              },
+              {
+                hostname: 'cplat-uranus-api01.gz01 ',
+                success: '否',
+                upTime: '2018-02-05  15:28:03 '
+              }
+            ]
+
+            let tableParams = {
+              pagination: false,
+              dataSource: dataSource,
+              columns: this.columnsNestedConfig(),
+              rowKey: (record, index) => {
+                return index;
+              }
+            };
+
+            let nextParams = {
+              pagination: false,
+              dataSource: dataSource,
+              columns: this.columnsNestedConfig(),
+              rowKey: (record, index) => {
+                return index;
+              }
+            };
+            return (
+              <Table {...tableParams} />
+            );
+          }
+
+          columnsConfig = () => {
+            return [
+              {
+                title: "序号",
+                dataIndex: "index",
+                key: "index",
+                width: 60,
+                render: (text, record, index) => {
+                  return index + 1;
+                }
+              },
+              {
+                title: "分组名",
+                dataIndex: "name",
+                key: "name",
+                width: "20%",
+                render: text => text
+              },
+              {
+                title: "配置时间",
+                dataIndex: "time",
+                key: "time",
+                width: "20%",
+                render: text => text
+              },
+              {
+                title: "操作",
+                dataIndex: "operation",
+                key: "operation",
+                width: "20%",
+                render: text => {
+                  return (
+                    <a href="" onClick={()=>{}} >部署</a>
+                  )
+                }
+              }
+            ];
+          };
+
+          renderTable = () => {
+            const dataSource = [
+              {
+                name: 'pre',
+                time: '2018-02-05  15:28:03'
+              },
+              {
+                name: 'han',
+                time: '2018-02-05  15:28:03'
+              }
+            ]
+
+            let tableParams = {
+              pagination: false,
+              dataSource: dataSource,
+              columns: this.columnsConfig(),
+              rowKey: (record, index) => {
+                return index;
+              }
+            };
+          
+            return (
+              <Table
+                className="components-table-demo-nested"
+                expandedRowRender={this.renderNestedTable}
+                {...tableParams}
+              />
+            );
+          }
+
+          render(){
+            return (this.renderTable())
+          }
+        }
+
+        export default NestedTable
+    description: 基本嵌套表格

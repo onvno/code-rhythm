@@ -1,0 +1,31 @@
+-
+    prefix: '@antd_modal_confirm_warn'
+    body: |-
+        import React, { Component } from "react";
+        import { Button, Icon, Table, Popover, Modal} from "antd";
+
+        class ModalWarn extends Component {
+          constructor(props) {
+            super(props);
+          }
+
+          handleRejected = () => {
+            Modal.warning({
+              className: 'proxy-confirm',
+              title: '您提交的流量配置申请未通过审核',
+              content: '原因：巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉',
+              okText: '确定'
+            });    
+          }
+
+          render() {
+            return (
+              <div>
+                {this.handleRejected()}
+              </div>
+            )
+          }
+        }
+
+        export default ModalWarn
+    description: modal基本确认警告框

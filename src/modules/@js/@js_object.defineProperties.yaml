@@ -1,0 +1,27 @@
+-
+    prefix: '@js_object.defineProperties'
+    body: |-
+        var obj = {a: 1};
+        Object.defineProperties(obj, {
+            'prop1': {
+                value: true,
+                writable: true,
+                enumerable: true,
+            },
+            'prop2': {
+                value: 'Hello',
+                writable: false,
+                enumerable: false, // 不可枚举
+            },
+            'prop3': {
+                get: function () {
+                    return this.a;
+                },
+                set : function (val) {
+                    this.a = val;
+                },
+                configurable : true, //true 当且仅当该属性描述符的类型可以被改变并且该属性可以从对应对象中删除,默认是false
+            }
+          // etc. etc.
+        });
+    description: 定义属性

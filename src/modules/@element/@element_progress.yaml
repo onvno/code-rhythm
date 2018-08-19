@@ -1,0 +1,11 @@
+-
+    prefix: '@element_progress'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/progress -->
+        <!--  :text-inside="true" 进度内显 -->
+        <el-progress :percentage="0" type="circle"></el-progress>
+        <el-progress :percentage="70"></el-progress>
+        <el-progress :percentage="80" color="#8e71c7"></el-progress>
+        <el-progress :percentage="100" status="success"></el-progress>
+        <el-progress :percentage="50" status="exception"></el-progress>
+    description: 标准进度条

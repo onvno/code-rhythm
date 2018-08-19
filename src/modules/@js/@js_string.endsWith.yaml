@@ -1,0 +1,8 @@
+-
+    prefix: '@js_string.endsWith'
+    body: |-
+        // str是否已xx结尾
+        var str = "To be, or not to be, that is the question.";
+        str.endsWith("question.") // true
+        str.endsWith("to be") // false
+    description: 'boolen:是否以某字符串结尾'

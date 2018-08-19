@@ -1,0 +1,30 @@
+-
+    prefix: '@element_select_create_item'
+    body: |-
+        <!-- 文档链接: http://element.eleme.io/#/zh-CN/component/select -->
+        <el-select
+          v-model="value10"
+          multiple
+          filterable
+          allow-create
+          default-first-option
+          placeholder="请选择文章标签">
+          <el-option
+            v-for="item in options5"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
+        <!-- option -->
+        options5: [{
+          value: 'HTML',
+          label: 'HTML'
+        }, {
+          value: 'CSS',
+          label: 'CSS'
+        }, {
+          value: 'JavaScript',
+          label: 'JavaScript'
+        }]
+    description: 可创建条目选择框

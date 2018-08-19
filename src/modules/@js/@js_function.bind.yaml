@@ -1,0 +1,14 @@
+-
+    prefix: '@js_function.bind'
+    body: |-
+        // 语法
+        // fun.bind(thisArg[, arg1[, arg2[, ...]]])
+        myObj = {
+            name:123,
+            getName: function(){
+                setTimeout(function(){
+                    console.log(this.name)
+                }.bind(this),1000) // 改变this为当前环境中的局部作用域myObj
+            }
+        }
+    description: bind用法

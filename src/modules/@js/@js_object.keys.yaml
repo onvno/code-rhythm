@@ -1,0 +1,11 @@
+-
+    prefix: '@js_object.keys'
+    body: |-
+        // 支持array & obj
+
+        let obj = { foo: "bar", baz: 42 };
+        let keys = Object.keys(obj);
+
+        let arr = ["a", "b", "c"];
+        let arrKeys = Object.keys(arr); 
+    description: 枚举：数组 & 对象
