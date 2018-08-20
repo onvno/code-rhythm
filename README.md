@@ -1,5 +1,7 @@
 # code-rhythm
 
+> 如希望自定义代码片段，可使用code-rhythm抽出的一个代码片段生成工具[snippet-builder](https://github.com/onvno/snippet-builder)
+
 #### 安装及使用可能遇到的问题
 
 * 如遇安装问题，请更新vscode
